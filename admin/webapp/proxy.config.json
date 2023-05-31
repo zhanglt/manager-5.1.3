@@ -274,10 +274,33 @@
         "logLevel": "debug",
         "secure": false,
         "target": "https://192.168.0.53:8444/"
+    },
+    "/api_key": {
+        "changeOrigin": true,
+        "logLevel": "debug",
+        "secure": false,
+        "target": "https://192.168.0.53:8444/"
+    },
+    "/gravatar": {
+        "changeOrigin": true,
+        "logLevel": "debug",
+        "secure": false,
+        "target": "https://192.168.0.53:8444/"
+    },
+    "/server": {
+        "changeOrigin": true,
+        "logLevel": "debug",
+        "secure": false,
+        "target": "https://192.168.0.53:8444/"
+    },
+        "/gravatar": {
+        "changeOrigin": true,
+        "logLevel": "debug",
+        "secure": false,
+        "target": "https://192.168.0.53:8444/"
     }
-    
-    
-    
+
+
     
 
 }
