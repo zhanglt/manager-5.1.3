@@ -64,3 +64,5 @@ admin/webapp/.angular
 /admin/.angular/
 /admin/webapp/websrc/assets/mockdata
 /admin/webapp/package-lock.json
+.metals/*
+.metals
