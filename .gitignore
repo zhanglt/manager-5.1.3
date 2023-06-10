@@ -66,3 +66,4 @@ admin/webapp/.angular
 /admin/webapp/package-lock.json
 .metals/*
 .metals
+.vscode

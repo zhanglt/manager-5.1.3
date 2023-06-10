@@ -1,0 +1,162 @@
+{
+    "version": "1.4.0",
+    "project": {
+        "name": "manager",
+        "directory": "/opt/nv/manager",
+        "workspaceDir": "/opt/nv/manager",
+        "sources": [
+            "/opt/nv/manager/src/main/scala",
+            "/opt/nv/manager/src/main/scala-2.11",
+            "/opt/nv/manager/src/main/scala-2",
+            "/opt/nv/manager/src/main/java",
+            "/opt/nv/manager/target/scala-2.11/src_managed/main"
+        ],
+        "dependencies": [
+            "common",
+            "admin"
+        ],
+        "classpath": [
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar"
+        ],
+        "out": "/opt/nv/manager/.bloop/manager",
+        "classesDir": "/opt/nv/manager/.bloop/manager/scala-2.11/classes",
+        "resources": [
+            "/opt/nv/manager/src/main/resources",
+            "/opt/nv/manager/target/scala-2.11/resource_managed/main"
+        ],
+        "scala": {
+            "organization": "org.scala-lang",
+            "name": "scala-compiler",
+            "version": "2.11.12",
+            "options": [
+                "-Xplugin:/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/kind-projector_2.11/0.10.3/kind-projector_2.11-0.10.3.jar",
+                "-encoding",
+                "UTF-8",
+                "-deprecation",
+                "-unchecked",
+                "-feature",
+                "-language:higherKinds",
+                "-Xlint",
+                "-Ypartial-unification"
+            ],
+            "jars": [
+                "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar",
+                "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.12/scala-compiler-2.11.12.jar",
+                "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.12/scala-reflect-2.11.12.jar",
+                "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5.jar",
+                "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar",
+                "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/jline/jline/2.14.3/jline-2.14.3.jar"
+            ],
+            "setup": {
+                "order": "mixed",
+                "addLibraryToBootClasspath": true,
+                "addCompilerToClasspath": false,
+                "addExtraJarsToClasspath": false,
+                "manageBootClasspath": true,
+                "filterLibraryFromClasspath": true
+            }
+        },
+        "java": {
+            "options": [
+                
+            ]
+        },
+        "test": {
+            "frameworks": [
+                {
+                    "names": [
+                        "org.scalacheck.ScalaCheckFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs2.runner.Specs2Framework",
+                        "org.specs2.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.scalatest.tools.Framework",
+                        "org.scalatest.tools.ScalaTestFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "com.novocode.junit.JUnitFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "munit.Framework"
+                    ]
+                }
+            ],
+            "options": {
+                "excludes": [
+                    
+                ],
+                "arguments": [
+                    
+                ]
+            }
+        },
+        "platform": {
+            "name": "jvm",
+            "config": {
+                "home": "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-2.el8_5.x86_64/jre",
+                "options": [
+                    "-Duser.dir=/opt/nv/manager"
+                ]
+            },
+            "mainClass": [
+                
+            ]
+        },
+        "resolution": {
+            "modules": [
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.11.12",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.11.12",
+                    "configurations": "optional",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12-sources.jar"
+                        }
+                    ]
+                }
+            ]
+        },
+        "tags": [
+            "library"
+        ]
+    }
+}
