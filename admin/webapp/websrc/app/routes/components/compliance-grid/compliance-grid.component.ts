@@ -236,7 +236,7 @@ export class ComplianceGridComponent implements OnInit {
           child_ids.push(child_id);
         });
         parent.child_ids = child_ids;
-        parent.description = `${v.length} reported entries in the check`;
+        parent.description = `本项检测包含${v.length}条记录 `;
       }
       complianceRow.push(parent);
     });
