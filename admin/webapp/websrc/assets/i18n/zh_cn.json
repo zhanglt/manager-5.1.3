@@ -834,6 +834,7 @@
       "SECURITY": "系统策略",
       "GROUP": "安全组",
       "POLICY": "网络规则",
+      "SIGSTORE_VERIFIERS": "Sigstore校验器",
       "RESPONSE_POLICY": "应对规则",
       "DLP_SENSORS": "DLP 检测器",
       "WAF_SENSORS": "WAF 检测器",
@@ -1802,7 +1803,8 @@
     },
     "msg": {
       "CREATED": "已创建新的 API 密钥",
-      "AUTH_INSTRUCTION": "API Key Name 和 Secret Key 可以组合起来用作 HTTP 授权标头",
+      "AUTH_INSTRUCTION": "直接针对 API 使用此令牌:",
+      "AUTH_CODE": "> curl -k -H \"Content-Type: application/json\" -H \"X-Auth-Apikey: {{apikey}}\" https://...",
       "SAVE_WARNING": "请保存上面的信息！ 这是您唯一能看到它的时候。 如果您丢失了它，您将需要创建一个新的 API 密钥。",
       "ADD_OK": "添加 API Key 成功。",
       "ADD_NG": "添加 API Key 失败。",
@@ -1814,7 +1816,7 @@
       "TITLE": "添加API密钥",
       "NAME_ERROR": "Access Key 最多可包含 32 个字母数字字符，包括'_'和'-'。",
       "SECRET": "密钥",
-      "TOKEN": "X-Auth-Apikey令牌",
+      "TOKEN": "X-Auth-Apikey",
       "COPY": "复制",
       "EXPIRE": "自动过期",
       "ADD": "添加",
@@ -2531,6 +2533,7 @@
     "PSS_RESTRICT_HINT": "如果部署不能满足\"严格限制\"的水平, 阻止措施将要被实施.",
     "sample": {
       "MULTI_VAL": "格式样例: element1, element2, element3",
+      "MULTI_VAL_SIG_VRF": "格式样例: 签名信任根名/检测器名1, 签名信任根名/检测器名2",
       "IMG_REG_HINT": "镜像库名应该是 \"localhost\" 或含有 \".\" 的名称"
     },
     "msg": {
@@ -2626,7 +2629,7 @@
       "CVE_MEDIUM_COUNT": "中危CVE数量",
       "CVE_SCORE": "CVE评分",
       "IMAGE_SCANNED": "镜像已扫描",
-      "IMAGE_SIGNED": "镜像没有签名",
+      "IMAGE_SIGNED": "镜像签名",
       "IMAGE_LABELS": "镜像标签",
       "RUN_AS_ROOT": "作为root运行",
       "USER_GROUPS": "用户组",
@@ -2655,7 +2658,8 @@
       "MEMORY_LIMIT_S": "内存限制",
       "MEMORY_REQUEST_S": "内存请求",
       "VIOLATE_PSS_POLICY": "违反PSA策略",
-      "MODULES": "模块"
+      "MODULES": "模块",
+      "IMAGE_VERIFIERS": "镜像Sigstore检测器"
     },
     "operators": {
       "=": "=",
@@ -2683,6 +2687,10 @@
       "NOTCONTAINSANY_SINGLE": "不是",
       "EXIST": "存在",
       "NOTEXIST": "不存在",
+      "REGEXCONTAINSANY_SINGLE": "匹配任意",
+      "!REGEXCONTAINSANY_SINGLE": "不匹配任何",
+      "REGEXCONTAINSANY": "匹配任意",
+      "!REGEXCONTAINSANY": "不匹配任何",
       "text": {
         "<=": "少于",
         ">=": "多于"
@@ -2891,6 +2899,7 @@
     "LOG_IN_JSON": "用Json:",
     "LOG_CATEGORIES": "类别:",
     "SEND_SYSLOG_PER_CVE": "发送每个CVE的单独系统日志事件",
+    "SERVER_CERTIFICATE": "服务器证书",
     "EXPORT": "输出",
     "IMPORT": "输入",
     "AWS_BILLING": "AWS市场支持",
@@ -3150,6 +3159,52 @@
     "CALLBACK_URL": "OpenID Connect重定向网址: ",
     "message": {
       "GET_SAML_ERR": "获取OpenID Connect配置时发生错误"
+    }
+  },
+  "signatures": {
+    "PRIVATE": "私有",
+    "PUBLIC": "共有",
+    "gridHeader": {
+      "NAME": "名称",
+      "SIG_NAME": "签名信任根名称",
+      "VERIFIER_NAME": "校验器名称",
+      "COMMENT": "说明",
+      "REKOR_PUBLIC_KEY": "Rekor公钥",
+      "ROOT_CERT": "根证书",
+      "SCT_PUBLIC_KEY": "SCT公钥",
+      "SCT_PUBLIC_KEY_HINT": "SCT: Signed certificate timestamp",
+      "ATTRIBUTE": "属性",
+      "TYPE": "类型",
+      "V_TYPE": "检测器类型",
+      "IGNORE_TLOG": "忽略Tlog",
+      "IGNORE_SCT": "忽略密钥",
+      "PUBLIC_KEY": "公钥",
+      "CERT_ISSUER": "证书发行者",
+      "CERT_SUBJECT": "证书主题"
+    },
+    "signatureModal": {
+      "ADD": "添加签名信任根",
+      "EDIT": "编辑签名信任根",
+      "DELETE": "删除签名信任根",
+      "VERIFIER": "校验器",
+      "ADD_VERIFIER": "添加校验器",
+      "EDIT_VERIFIER": "编辑校验器",
+      "DELETE_VERIFIER": "删除校验器"
+    },
+    "msg": {
+      "ADD_VERIFIER_NG": "校验器的最大数量为16",
+      "INSERT_SIGSTORE_NG": "签名信任根添加时发生错误!",
+      "INSERT_VERIFIER_OK": "检测器添加成功!",
+      "INSERT_VERIFIER_NG": "添加检测器时发生错误!",
+      "UPDATE_SIGSTORE_OK": "签名信任根更新成功!",
+      "UPDATE_SIGSTORE_NG": "签名信任根更新时发生错误!",
+      "UPDATE_VERIFIER_OK": "检测器添加成功!",
+      "UPDATE_VERIFIER_NG": "添加检测器时发生错误!",
+      "REMOVE_CFM": "确定要删除吗?",
+      "REMOVE_SIGSTORE_OK": "签名信任根删除成功!",
+      "REMOVE_SIGSTORE_NG": "删除签名信任根时发生错误!",
+      "REMOVE_VERIFIER_OK": "检测器删除成功!",
+      "REMOVE_VERIFIER_NG": "检测器删除时发生错误!"
     }
   },
   "just_now": "刚才",

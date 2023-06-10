@@ -131,5 +131,13 @@ export class PathConstant {
   public static DEBUG_URL = 'debug'; //config
   public static THREAT_URL = 'threat';
   public static HEART_BEAT_URL = 'heartbeat';
+  public static SIGNATURE_URL = 'sigstore';
+  public static VERIFIER_URL = 'verifier';
+  public static SIGNATURE_IMPORT_URL = 'signature/import';
+  public static SIGNATURE_EXPORT_URL = 'signature/export';
   public static CSP_SUPPORT_URL = 'csp-support';
+  public static CUSTOM_LOGIN_LOGO = 'custom-login-logo';
+  public static CUSTOM_EULA_PROMPT = 'custom-eula-prompt';
+  public static CUSTOM_EULA_POLICY = 'custom-eula-policy';
+  public static CUSTOM_PAGE_HEADER = 'custom-page-header';
 }

@@ -10,8 +10,11 @@ from prog import output
 
 CriteriaOpNotEqual = "!="
 CriteriaOpNotRegex = "!regex"
+CriteriaOpRegexNotContainsAny = "!regexContainsAny"
 CriteriaOpContainsAll = "containsAll"
 CriteriaOpContainsAny = "containsAny"
+CriteriaOpRegexContainsAny = "regexContainsAny"
+
 CriteriaOpContainsOtherThan = "containsOtherThan"
 CriteriaOpNotContainsAny = "notContainsAny"
 
@@ -37,7 +40,7 @@ SingleValueCrt = {"cveHighCount": True,
                   "runAsRoot": True,
                   "allowPrivEscalation": True,
                   "pspCompliance": True,
-                  "user": True,
+                  "user": False,
                   "userGroups": False,
                   "publishDays": True,
                   "imageCompliance": True,
@@ -52,6 +55,7 @@ SingleValueCrt = {"cveHighCount": True,
                   "violatePssPolicy": True,
                   "customPath": False,
                   "saBindRiskyRole": True,
+                  "imageVerifiers": True,
                   }
 
 NamesDisplay = {"cveHighCount": "High severity CVE count",
@@ -85,7 +89,8 @@ NamesDisplay = {"cveHighCount": "High severity CVE count",
                 "memoryRequest": "memory request",
                 "memoryLimit": "memory limit",
                 "modules": "Image Modules/Packages",
-                "violatePssPolicy": "Violates Selected K8s Pod Security Standards Policy"
+                "violatePssPolicy": "Violates Selected K8s Pod Security Standards Policy",
+                "imageVerifiers": "Image Sigstore Verifiers",
                 }
 
 SaBindRiskyRoleDisplay = {
@@ -101,10 +106,13 @@ NamesDisplay2 = {  # for criteria that has sub-criteria
 }
 
 OpsDisplay1 = {CriteriaOpContainsAny: 'is', CriteriaOpNotContainsAny: 'is not',
-               CriteriaOpContainsAll: CriteriaOpContainsAll, CriteriaOpContainsOtherThan: CriteriaOpContainsOtherThan}
+               CriteriaOpContainsAll: CriteriaOpContainsAll, CriteriaOpContainsOtherThan: CriteriaOpContainsOtherThan,
+               CriteriaOpRegexContainsAny: 'matches any regex in', CriteriaOpRegexNotContainsAny: 'matches none regex in'}
 OpsDisplay2 = {CriteriaOpContainsAny: 'contains any in', CriteriaOpNotContainsAny: 'not contains any in',
-               CriteriaOpContainsAll: 'contains all in', CriteriaOpContainsOtherThan: 'contains value not in'}
-
+               CriteriaOpContainsAll: 'contains all in', CriteriaOpContainsOtherThan: 'contains value not in',
+               CriteriaOpRegexContainsAny: 'matches any regex in', CriteriaOpRegexNotContainsAny: 'matches none regex in'}
+userOpsDisplay = {CriteriaOpContainsAny: 'is one of', CriteriaOpNotContainsAny: 'is not one of',
+                  CriteriaOpRegexContainsAny: 'matches any regex in', CriteriaOpRegexNotContainsAny: 'matches none regex in'}
 
 RiskyRoleDescriptions = {
     "risky_role_view_secret": "Service Account can listing secrets",
@@ -181,11 +189,14 @@ def show_admission_stats(data):
 
 def _get_criterion_op_value(c):
     opDisplay = c["op"]
-    if c["op"] == CriteriaOpContainsAll or c["op"] == CriteriaOpContainsAny or c["op"] == CriteriaOpNotContainsAny or c["op"] == CriteriaOpContainsOtherThan:
-        if SingleValueCrt[c["name"]] is True:
-            opDisplay = OpsDisplay1[c["op"]]
+    if c["op"] == CriteriaOpContainsAll or c["op"] == CriteriaOpContainsAny or c["op"] == CriteriaOpNotContainsAny or c["op"] == CriteriaOpRegexContainsAny or c["op"] == CriteriaOpRegexNotContainsAny or c["op"] == CriteriaOpContainsOtherThan:
+        if c["name"] == "user":
+            opDisplay = userOpsDisplay[c["op"]]
         else:
-            opDisplay = OpsDisplay2[c["op"]]
+            if SingleValueCrt[c["name"]] is True:
+                opDisplay = OpsDisplay1[c["op"]]
+            else:
+                opDisplay = OpsDisplay2[c["op"]]
         value = "{{{}}}".format(c["value"])
     elif c["op"] == "notExist":
         opDisplay = "doesn't exist"
@@ -235,7 +246,7 @@ def _list_admission_rule_display_format(rule):
                 continue
             positive = False
             for c in types[t]:
-                if c["op"] != CriteriaOpNotEqual and c["op"] != CriteriaOpNotRegex and c["op"] != CriteriaOpNotContainsAny:  
+                if c["op"] != CriteriaOpNotEqual and c["op"] != CriteriaOpNotRegex and c["op"] != CriteriaOpNotContainsAny and c["op"] != CriteriaOpRegexNotContainsAny:  
                     positive = True
                     break
             tc = ""
@@ -422,6 +433,16 @@ def _list_predefined_risky_roles(data, criteria):
     columns = ("value","description")
     output.list(columns, mainCrit)
 
+def _list_sigstore_verifiers(data, verifiers):
+    click.echo(" ")
+    click.echo("Image Sigstore verifiers:")
+    sigstoreVerifiers=[]
+    for v in verifiers:
+        row = {"verifier": v, "": ""}
+        sigstoreVerifiers.append(row)
+    columns = ("verifier", "")
+    output.list(columns, sigstoreVerifiers)
+
 def _list_custompath_options(data, criteria):
     click.echo(" ")
     click.echo("Content for customPath options:")
@@ -455,6 +476,8 @@ def show_admission_rule_options(data):
             _list_admission_pss_collections(data, rest_admission_options["pss_collections"])
         if "predefined_risky_roles" in rest_admission_options:
             _list_predefined_risky_roles(data, rest_admission_options["predefined_risky_roles"])
+        if "sigstore_verifiers" in rest_admission_options:
+            _list_sigstore_verifiers(data, rest_admission_options["sigstore_verifiers"])
     else:
         click.echo("")
         click.echo("")
@@ -566,7 +589,7 @@ def _parse_adm_criteria(criteria):
               help="It's a local or federal rule")
 # @click.option("--category", default="Kubernetes", help="rule category. default: Kubernetes")
 @click.option("--criteria", multiple=True,
-              help="Format is name:op:value{/subName:op:value}. name can be allowPrivEscalation, count, cpuLimit, cpuRequest, cveHighCount, cveHighWithFixCount, cveMediumCount, cveNames, cveScoreCount, envVarSecrets, image, imageCompliance, imageNoOS, imageScanned, imageSigned, labels, memoryLimit, memoryRequest, modules, mountVolumes, namespace, pspCompliance, resourceLimit. subName can be publishDays, runAsRoot, shareIpcWithHost, shareNetWithHost, sharePidWithHost, user, userGroups, violatePssPolicy. Format for criteira named customPath is name:op:path:valuetype:value. Format for criteria named saBindRiskyRole is name:op:value. See command: show admission rule options")
+              help="Format is name:op:value{/subName:op:value}. name can be allowPrivEscalation, count, cpuLimit, cpuRequest, cveHighCount, cveHighWithFixCount, cveMediumCount, cveNames, cveScoreCount, envVarSecrets, image, imageCompliance, imageNoOS, imageScanned, imageSigned, imageVerifiers, labels, memoryLimit, memoryRequest, modules, mountVolumes, namespace, pspCompliance, resourceLimit. subName can be publishDays, runAsRoot, shareIpcWithHost, shareNetWithHost, sharePidWithHost, user, userGroups, violatePssPolicy. Format for criteira named customPath is name:op:path:valuetype:value. Format for criteria named saBindRiskyRole is name:op:value. See command: show admission rule options")
 @click.option("--disable/--enable", default=False, help="Disable/enable the admission control rule [default: --enable]")
 @click.option("--mode", default="", type=click.Choice(['','monitor', 'protect']), help="Rule mode, only for deny rules")
 @click.option("--comment", default="", help="Rule comment")
@@ -596,7 +619,8 @@ def create_admission_rule(data, type, scope, criteria, disable, mode, comment):
         rule["cfg_type"] = client.UserCreatedCfg
     rule["rule_type"] = type
     rule["id"] = 0
-    rule["rule_mode"] = mode
+    if type == 'deny':
+        rule["rule_mode"] = mode
     body = dict()
     body["config"] = rule
     # click.echo("Admission control rule object: {}".format(json.dumps(body)))
@@ -659,7 +683,7 @@ def set_admission_state(data, disable, mode, client_mode):
 @click.option("--scope", default="local", type=click.Choice(['fed', 'local']), show_default=True, help="Obsolete")
 # @click.option("--category", default="Kubernetes", show_default=True, help="Rule category")
 @click.option("--criteria", multiple=True,
-              help="Format is name:op:value{/subName:op:value}. name can be allowPrivEscalation, count, cpuLimit, cpuRequest, cveHighCount, cveHighWithFixCount, cveMediumCount, cveNames, cveScoreCount, envVarSecrets, image, imageCompliance, imageNoOS, imageScanned, imageSigned, labels, memoryLimit, memoryRequest, modules, mountVolumes, namespace, pspCompliance, resourceLimit. subName can be publishDays, runAsRoot, shareIpcWithHost, shareNetWithHost, sharePidWithHost, user, userGroups, violatePssPolicy. Format for criteira named customPath is name:op:path:valuetype:value. Format for criteria named saBindRiskyRole is name:op:value. See command: show admission rule options")
+              help="Format is name:op:value{/subName:op:value}. name can be allowPrivEscalation, count, cpuLimit, cpuRequest, cveHighCount, cveHighWithFixCount, cveMediumCount, cveNames, cveScoreCount, envVarSecrets, image, imageCompliance, imageNoOS, imageScanned, imageSigned, imageVerifiers, labels, memoryLimit, memoryRequest, modules, mountVolumes, namespace, pspCompliance, resourceLimit. subName can be publishDays, runAsRoot, shareIpcWithHost, shareNetWithHost, sharePidWithHost, user, userGroups, violatePssPolicy. Format for criteira named customPath is name:op:path:valuetype:value. Format for criteria named saBindRiskyRole is name:op:value. See command: show admission rule options")
 @click.option("--enable", "state", flag_value='enable', help="Enable the admission control rule")
 @click.option("--disable", "state", flag_value='disable', help="Enable the admission control rule")
 @click.option("--mode", required=False, type=click.Choice(['', 'monitor', 'protect']), help="Rule mode, only for deny rules")
@@ -716,8 +740,13 @@ def set_admission_rule(data, id, scope, criteria, state, mode, comment):
         rule["category"] = category
         modify = True
     if mode is not None:
-        rule["rule_mode"] = mode
-        modify = True
+        if "rule_type" in rule and rule["rule_type"] == 'deny':
+            rule["rule_mode"] = mode
+            modify = True
+        else:
+            click.echo("Abort because --mode cannot be set for allow rules.")
+            click.echo("")
+            return
 
     if modify:
         body = dict()

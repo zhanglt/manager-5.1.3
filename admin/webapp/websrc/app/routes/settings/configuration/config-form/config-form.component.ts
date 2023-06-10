@@ -47,9 +47,10 @@ export class ConfigFormComponent implements OnInit {
       },
       isOpenShift: () => GlobalVariable.isOpenShift,
       isRancherSSO: () =>
-        GlobalVariable.user.server === MapConstant.AUTH_PROVIDER.RANCHER,
+        GlobalVariable.user.token.server === MapConstant.AUTH_PROVIDER.RANCHER,
       isOpenShiftSSO: () =>
-        GlobalVariable.user.server === MapConstant.AUTH_PROVIDER.OPENSHIFT,
+        GlobalVariable.user.token.server ===
+        MapConstant.AUTH_PROVIDER.OPENSHIFT,
       permissions: {},
       ibmsa: {
         setup: this.setupIBMSA.bind(this),
@@ -178,6 +179,7 @@ export class ConfigFormComponent implements OnInit {
           syslog_categories: base_config.syslog.syslog_categories,
           syslog_in_json: base_config.syslog.syslog_in_json,
           single_cve_per_syslog: base_config.syslog.single_cve_per_syslog,
+          syslog_server_cert: base_config.syslog.syslog_server_cert
         },
         auth_cfg: {
           // NOTE: auth_cfg = {} - formly is missing auth_cfg fields
