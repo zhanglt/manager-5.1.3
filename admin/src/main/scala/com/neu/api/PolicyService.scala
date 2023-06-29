@@ -644,6 +644,7 @@ class PolicyService()(implicit executionContext: ExecutionContext)
                     complete {
                       if (name.isEmpty) {
                         logger.info("Getting scan registries")
+                        logger.info(s"${baseClusterUri(tokenId)}/$scanRegistryPath")
                         RestClient.httpRequestWithHeader(
                           s"${baseClusterUri(tokenId)}/$scanRegistryPath",
                           GET,
@@ -819,6 +820,9 @@ class PolicyService()(implicit executionContext: ExecutionContext)
                   Utils.respondWithNoCacheControl() {
                     complete {
                       logger.info("Getting scan registry summary")
+                      logger.info(
+                        s"${baseClusterUri(tokenId)}/$scanRegistryPath/${UrlEscapers.urlFragmentEscaper().escape(name)}/images"
+                      )
                       RestClient.httpRequestWithHeader(
                         s"${baseClusterUri(tokenId)}/$scanRegistryPath/${UrlEscapers.urlFragmentEscaper().escape(name)}/images",
                         GET,
@@ -834,6 +838,9 @@ class PolicyService()(implicit executionContext: ExecutionContext)
                   Utils.respondWithNoCacheControl() {
                     complete {
                       logger.info("Starting scan registry: {}", name)
+                      logger.info(
+                        s"${baseClusterUri(tokenId)}/$scanRegistryPath/${UrlEscapers.urlFragmentEscaper().escape(name)}/scan"
+                      )
                       RestClient.httpRequestWithHeader(
                         s"${baseClusterUri(tokenId)}/$scanRegistryPath/${UrlEscapers.urlFragmentEscaper().escape(name)}/scan",
                         POST,
