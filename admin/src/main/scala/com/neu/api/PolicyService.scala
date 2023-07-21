@@ -553,6 +553,7 @@ class PolicyService()(implicit executionContext: ExecutionContext)
                 Utils.respondWithNoCacheControl() {
                   complete {
                     logger.info("Scan on node: {}", id)
+                    logger.info("scan host url: {}", s"${baseClusterUri(tokenId)}/scan/host/$id")
                     RestClient.httpRequestWithHeader(
                       s"${baseClusterUri(tokenId)}/scan/host/$id",
                       POST,
@@ -595,6 +596,10 @@ class PolicyService()(implicit executionContext: ExecutionContext)
                 Utils.respondWithNoCacheControl() {
                   complete {
                     logger.info("Scan on node: {}", id)
+                    logger.info(
+                      "Scan platform url : {}",
+                      s"${baseClusterUri(tokenId)}/scan/platform/platform"
+                    )
                     RestClient.httpRequestWithHeader(
                       s"${baseClusterUri(tokenId)}/scan/platform/platform",
                       POST,
