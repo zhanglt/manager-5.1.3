@@ -13,7 +13,8 @@
     "lint:check": "ng lint",
     "format": "prettier --write \"websrc/app/**/*.{ts,html,json}\"",
     "format:check": "prettier --config ./.prettierrc --list-different \"websrc/app/**/*.{ts,html,json}\"",
-    "watch": "ng build --watch --configuration development",
+    "prebuild:watch": "npm run prebuild",
+    "build:watch": "ng build --watch --configuration development",
     "test": "ng test",
     "webdriver-manager-update": "node ./node_modules/protractor/bin/webdriver-manager update"
   },
