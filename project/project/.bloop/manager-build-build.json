@@ -122,8 +122,8 @@
             ],
             "jars": [
                 "/root/.sbt/boot/scala-2.12.16/lib/scala-library.jar",
-                "/root/.sbt/boot/scala-2.12.16/lib/scala-reflect.jar",
                 "/root/.sbt/boot/scala-2.12.16/lib/scala-compiler.jar",
+                "/root/.sbt/boot/scala-2.12.16/lib/scala-reflect.jar",
                 "/root/.sbt/boot/scala-2.12.16/lib/scala-xml_2.12-1.0.6.jar"
             ],
             "setup": {
