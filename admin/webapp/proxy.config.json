@@ -3,301 +3,301 @@
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/auth": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/config-v2": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/controller": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/dashboard/details": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/dashboard/notifications2": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/dashboard/rbac": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/dashboard/scores2": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/enforcer": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/eula": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/fed/member": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/group": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/heartbeat": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/host": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/network": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/policy": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/responsePolicy": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/scan": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/summary": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/version": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/workload": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/user": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/domain": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/role2": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/password-profile": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/audit": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/security-events2": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/event": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/container": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/risk/cve": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/risk/cve/profile": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/risk/compliance": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/risk/compliance/profile": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/risk/compliance/template": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/ip-geo": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/dlp/sensor": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/waf/sensor": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/token_auth_server": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/self": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/sniffer": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/service": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/waf/group": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/dlp/group": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/processProfile": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/fileProfile": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/filePreProfile": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/api_key": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/gravatar": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
     "/server": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     },
         "/gravatar": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://192.168.0.53:8444/"
+        "target": "https://10.0.0.88:8443/"
     }
 
 

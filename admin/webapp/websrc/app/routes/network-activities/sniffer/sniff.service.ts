@@ -35,7 +35,7 @@ export class SniffService {
         headerName: this.translate.instant("network.gridHeader.START_TIME"),
         field: "start_time",
         cellRenderer: params =>
-          moment(params.value * 1000).format("MM/DD/Y HH:mm:ss"),
+          moment(params.value * 1000).format("yyyy-MM-dd HH:mm:ss"),
         icons: {
           sortAscending: '<em class="fas fa-sort-numeric-up"></em>',
           sortDescending: '<em class="fas fa-sort-numeric-down"></em>'

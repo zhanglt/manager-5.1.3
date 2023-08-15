@@ -338,7 +338,7 @@ export class ComplianceGridComponent implements OnInit {
         csvTitle.push(
           `${this.translate.instant(
             'scan.gridHeader.TIME'
-          )}: ${this.datePipe.transform(this.runAt, 'MMM dd y HH:mm:ss')}`
+          )}: ${this.datePipe.transform(this.runAt, 'yyyy-MM-dd HH:mm:ss')}`
         );
       }
       return csvTitle.filter(title => title).join(',');
