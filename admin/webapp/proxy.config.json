@@ -3,301 +3,301 @@
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/auth": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/config-v2": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/controller": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/dashboard/details": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/dashboard/notifications2": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/dashboard/rbac": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/dashboard/scores2": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/enforcer": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/eula": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/fed/member": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/group": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/heartbeat": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/host": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/network": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/policy": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/responsePolicy": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/scan": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/summary": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/version": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/workload": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/user": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/domain": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/role2": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/password-profile": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/audit": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/security-events2": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/event": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/container": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/risk/cve": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/risk/cve/profile": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/risk/compliance": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/risk/compliance/profile": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/risk/compliance/template": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/ip-geo": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/dlp/sensor": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/waf/sensor": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/token_auth_server": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/self": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/sniffer": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/service": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/waf/group": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/dlp/group": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/processProfile": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/fileProfile": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/filePreProfile": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/api_key": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/gravatar": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
     "/server": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     },
         "/gravatar": {
         "changeOrigin": true,
         "logLevel": "debug",
         "secure": false,
-        "target": "https://10.0.0.88:8443/"
+        "target": "https://10.0.0.88:8444/"
     }
 
 

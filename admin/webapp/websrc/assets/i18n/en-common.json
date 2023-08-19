@@ -2487,7 +2487,7 @@
       "QUARANTINE": "隔离",
       "WEBHOOK": "网络挂接",
       "DEFAULT": "缺省",
-      "SUPPRESS-LOG": "取缔日志"
+      "SUPPRESS-LOG": "抑制日志"
     },
     "categories": {
       "THREAT": "威胁",

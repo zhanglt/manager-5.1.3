@@ -146,6 +146,7 @@
       </mat-form-field>
     </div>
   </ng-container>
+
   <ng-container *ngSwitchCase="'DLP'">
     <div
       style="position: absolute; right: 20px; top: 5px;"
@@ -210,6 +211,7 @@
       </div>
     </div>
   </ng-container>
+
 </ng-container>
 <mat-tab-group
   id="group-details"
@@ -261,6 +263,7 @@
     >
     </app-process-profile-rules>
   </mat-tab>
+
   <mat-tab
     label="{{ 'service.FILE_PROFILE' | translate }}"
     [labelClass]="kind==='container' ? '' : 'hide'"
@@ -280,6 +283,7 @@
     >
     </app-file-access-rules>
   </mat-tab>
+  
   <mat-tab
     label="{{ 'service.POLICY_RULES' | translate }}"
   >
@@ -302,6 +306,7 @@
       [resizableHeight]="resizableHeight">
     </app-response-rules>
   </mat-tab>
+  <!--
   <mat-tab
     label="{{ 'group.dlp.TITLE' | translate }}"
     [labelClass]="kind==='container' && cfgType !== CFG_TYPE.FED ? '' : 'hide'"
@@ -334,6 +339,7 @@
       [resizableHeight]="resizableHeight">
     </app-group-waf>
   </mat-tab>
+-->
 </mat-tab-group>
 <ng-template #scoreImprovement>
   <mat-tab-group

@@ -72,11 +72,13 @@ export class VulnerabilitiesGridComponent implements OnInit, OnChanges {
         this.translate.instant('scan.gridHeader.FEED_RATING'),
       width: 150,
     },
+    /** 
     {
       field: 'file_name',
       headerValueGetter: () =>
         this.translate.instant('scan.gridHeader.FILE_NAME'),
     },
+    **/
     {
       field: 'package_name',
       headerValueGetter: () =>
@@ -180,8 +182,9 @@ export class VulnerabilitiesGridComponent implements OnInit, OnChanges {
 
   dateFormatter(params: ValueFormatterParams): string {
     const date = new Date(params.data.published_timestamp * 1000);
-    const dateString = date.toDateString().split(' ').slice(1);
-    dateString[1] = dateString[1] + ',';
-    return dateString.join(' ');
+   // const dateString = date.toDateString().split(' ').slice(1);
+   // dateString[1] = dateString[1] + ',';
+  //  return dateString.join(' ');
+    return date.toJSON().split('T').join('').substr(0,10)
   }
 }

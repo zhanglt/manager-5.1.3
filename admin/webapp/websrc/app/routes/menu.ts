@@ -40,11 +40,12 @@ const ASSETS = {
       translate: 'sidebar.nav.REG_SCAN',
       link: '/regScan',
     },
+   /** 
     {
       text: 'Sigstore Verifiers',
       translate: 'sidebar.nav.SIGSTORE_VERIFIERS',
       link: '/signature-verifiers',
-    },
+    },**/
     {
       text: 'System Components',
       translate: 'sidebar.nav.SYSTEM_COMPONENTS',
@@ -77,6 +78,7 @@ const POLICY = {
       translate: 'sidebar.nav.RESPONSE_POLICY',
       link: '/response-policy',
     },
+    /** 
     {
       text: 'DLP Sensors',
       translate: 'sidebar.nav.DLP_SENSORS',
@@ -86,7 +88,8 @@ const POLICY = {
       text: 'WAF Sensors',
       translate: 'sidebar.nav.WAF_SENSORS',
       link: '/waf-sensors',
-    },
+    },**/
+
   ],
 };
 const SECURITY_RISKS = {
