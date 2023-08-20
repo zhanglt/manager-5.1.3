@@ -157,7 +157,7 @@ export class RegistryDetailsTableComponent implements OnInit, OnChanges {
   scannedAtFormatter(params: ValueFormatterParams): string {
     const date = this.date.transform(
       params.data.scanned_at,
-      'MMM d, y h:mm:ss'
+      'yyyy-MM-dd hh:mm:ss'
     );
     return date ? date : '';
   }

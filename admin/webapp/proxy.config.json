@@ -298,9 +298,26 @@
         "logLevel": "debug",
         "secure": false,
         "target": "https://10.0.0.88:8444/"
+    },
+        "/usage": {
+        "changeOrigin": true,
+        "logLevel": "debug",
+        "secure": false,
+        "target": "https://10.0.0.88:8444/"
+    },
+        "/file/debug": {
+        "changeOrigin": true,
+        "logLevel": "debug",
+        "secure": false,
+        "target": "https://10.0.0.88:8444/"
+    },
+        "/rebran": {
+        "changeOrigin": true,
+        "logLevel": "debug",
+        "secure": false,
+        "target": "https://10.0.0.88:8444/"
     }
 
 
-    
 
 }

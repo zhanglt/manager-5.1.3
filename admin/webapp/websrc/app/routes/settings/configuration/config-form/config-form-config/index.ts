@@ -334,6 +334,7 @@ export const ConfigFormConfig: FormlyFieldConfig[] = [
     ],
     templateOptions: { append: true, divider: true },
   },
+   
   {
     wrappers: [FormlyComponents.SECTION_WRAPPER],
     fieldGroup: [TelemetryToggleBoolField, TelemetryToggleField],
@@ -344,6 +345,7 @@ export const ConfigFormConfig: FormlyFieldConfig[] = [
       divider: true,
     },
   },
+ 
   {
     wrappers: [FormlyComponents.SECTION_WRAPPER],
     fieldGroup: [IBMSAToggleField, IBMSAStartField],
@@ -353,6 +355,7 @@ export const ConfigFormConfig: FormlyFieldConfig[] = [
       inline: true,
     },
   },
+ 
   {
     wrappers: [FormlyComponents.SECTION_WRAPPER],
     fieldGroupClassName: 'row align-items-center',
@@ -373,4 +376,5 @@ export const ConfigFormConfig: FormlyFieldConfig[] = [
     ],
     templateOptions: { append: true },
   },
+   
 ];

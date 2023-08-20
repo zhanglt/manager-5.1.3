@@ -112,11 +112,13 @@ const SECURITY_RISKS = {
       translate: 'sidebar.nav.BENCH',
       link: '/bench',
     },
+/*
     {
       text: 'Compliance Profile',
       translate: 'cis.COMPLIANCE_PROFILE',
       link: '/cisProfile',
     },
+*/
   ],
 };
 const NOTIFICATIONS = {
