@@ -91,12 +91,12 @@ export class ComplianceItemsChartsComponent implements OnInit, OnChanges {
       },
       data: {
         labels: [
-          ['Error'],
-          ['High'],
-          ['Warning'],
-          ['Note'],
-          ['Info'],
-          ['Pass'],
+          ['错误'],
+          ['高级别'],
+          ['警告'],
+          ['提示'],
+          ['信息'],
+          ['通过'],
         ],
         datasets: [
           {
@@ -156,7 +156,7 @@ export class ComplianceItemsChartsComponent implements OnInit, OnChanges {
         },
       },
       data: {
-        labels: [['Platform'], ['Image'], ['Node'], ['Container']],
+        labels: [['平台'], ['镜像'], ['主机'], ['容器']],
         datasets: [
           {
             hoverBackgroundColor: ['#f22d3a', '#86aec2', '#4D5360', '#36A2EB'],

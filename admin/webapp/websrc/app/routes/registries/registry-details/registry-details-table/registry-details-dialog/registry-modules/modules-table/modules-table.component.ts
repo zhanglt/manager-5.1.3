@@ -64,7 +64,7 @@ export class ModulesTableComponent implements OnInit, OnChanges {
         );
       },
       cellRenderer: 'statusCellRenderer',
-      headerValueGetter: () => 'Vulnerabilities',
+      headerValueGetter: () => '漏洞',
     },
   ];
 
