@@ -240,7 +240,7 @@ export const ConfigFormConfig: FormlyFieldConfig[] = [
   {
     wrappers: [FormlyComponents.SECTION_WRAPPER],
     fieldGroup: [WebhookTableField],
-    templateOptions: { label: 'setting.WEBHOOKS', divider: true },
+    templateOptions: { label: 'WEBHOOKS', divider: true },
   },
   {
     wrappers: [FormlyComponents.SECTION_WRAPPER],
@@ -334,7 +334,7 @@ export const ConfigFormConfig: FormlyFieldConfig[] = [
     ],
     templateOptions: { append: true, divider: true },
   },
-   
+  /* 
   {
     wrappers: [FormlyComponents.SECTION_WRAPPER],
     fieldGroup: [TelemetryToggleBoolField, TelemetryToggleField],
@@ -376,5 +376,5 @@ export const ConfigFormConfig: FormlyFieldConfig[] = [
     ],
     templateOptions: { append: true },
   },
-   
+   */
 ];
