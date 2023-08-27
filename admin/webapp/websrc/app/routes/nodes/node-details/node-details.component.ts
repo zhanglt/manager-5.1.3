@@ -189,12 +189,12 @@ export class NodeDetailsComponent implements OnInit {
         {
           name: vulnerability.name,
           days: 0,
-          comment: `Vulnerability was accepted on ${
+          comment: `主机源: ${
             this.node.name
-          } at ${this.datePipe.transform(
+          } 时间: ${this.datePipe.transform(
             new Date(),
             'yyyy-MM-dd HH:mm:ss'
-          )} from Hosts page`,
+          )} 来源: 主机`,
           images: [],
           domains: [],
         },
