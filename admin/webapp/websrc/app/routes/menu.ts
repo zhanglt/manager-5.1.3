@@ -1,42 +1,42 @@
 const DASHBOARD = {
-  text: 'Dashboard',
+  text: '系统概览',
   translate: 'sidebar.nav.DASHBOARD',
   link: '/dashboard',
   icon: 'performance',
 };
 const NETWORK_ACTIVITY = {
-  text: 'Network Activity',
+  text: '网络操作',
   translate: 'sidebar.nav.NETWORK_ACTIVITY',
   link: '/graph',
   icon: 'neural_network',
 };
 const ASSETS = {
-  text: 'Assets',
+  text: '系统资产',
   translate: 'sidebar.nav.RESOURCE',
   icon: 'products',
   submenu: [
     {
-      text: 'Platform',
+      text: '平台',
       translate: 'scan.PLATFORM',
       link: '/platforms',
     },
     {
-      text: 'Namespaces',
+      text: '命名空间',
       translate: 'sidebar.nav.NAMESPACES',
       link: '/domains',
     },
     {
-      text: 'Nodes',
+      text: '主机节点',
       translate: 'sidebar.nav.NODES',
       link: '/hosts',
     },
     {
-      text: 'Containers',
+      text: '容器',
       translate: 'sidebar.nav.CONTAINERS',
       link: '/workloads',
     },
     {
-      text: 'Registries',
+      text: '镜像库',
       translate: 'sidebar.nav.REG_SCAN',
       link: '/regScan',
     },
@@ -47,34 +47,34 @@ const ASSETS = {
       link: '/signature-verifiers',
     },**/
     {
-      text: 'System Components',
+      text: '系统组件',
       translate: 'sidebar.nav.SYSTEM_COMPONENTS',
       link: '/controllers',
     },
   ],
 };
 const POLICY = {
-  text: 'Policy',
+  text: '系统策略',
   translate: 'sidebar.nav.SECURITY',
   icon: 'policy',
   submenu: [
     {
-      text: 'Admission Control',
+      text: '准入控制',
       translate: 'sidebar.nav.ADMISSION_CONTROL',
       link: '/admission-control',
     },
     {
-      text: 'Groups',
+      text: '安全组',
       translate: 'sidebar.nav.GROUP',
       link: '/group',
     },
     {
-      text: 'Network Rules',
+      text: '网络规则',
       translate: 'sidebar.nav.POLICY',
       link: '/policy',
     },
     {
-      text: 'Response Rules',
+      text: '响应规则',
       translate: 'sidebar.nav.RESPONSE_POLICY',
       link: '/response-policy',
     },
@@ -93,22 +93,22 @@ const POLICY = {
   ],
 };
 const SECURITY_RISKS = {
-  text: 'Security Risks',
+  text: '安全漏洞',
   translate: 'sidebar.nav.RISK',
   icon: 'critical_bug',
   submenu: [
     {
-      text: 'Vulnerabilities',
+      text: '漏洞',
       translate: 'sidebar.nav.SCAN',
       link: '/scan',
     },
     {
-      text: 'Vulnerability Profile',
+      text: '过滤',
       translate: 'cveProfile.TITLE',
       link: '/cveProfile',
     },
     {
-      text: 'Compliance',
+      text: '基线检车',
       translate: 'sidebar.nav.BENCH',
       link: '/bench',
     },
@@ -122,29 +122,29 @@ const SECURITY_RISKS = {
   ],
 };
 const NOTIFICATIONS = {
-  text: 'Notifications',
+  text: '事件通知',
   translate: 'sidebar.nav.NOTIFICATIONS',
   icon: 'notifications_none',
   submenu: [
     {
-      text: 'Security Events',
+      text: '安全事件',
       translate: 'sidebar.nav.SECURITY_EVENT',
       link: '/security-event',
     },
     {
-      text: 'Risk Reports',
+      text: '风险事件',
       translate: 'sidebar.nav.AUDIT',
       link: '/audit',
     },
     {
-      text: 'Events',
+      text: '系统事件',
       translate: 'sidebar.nav.EVENT',
       link: '/event',
     },
   ],
 };
 const SETTINGS = {
-  text: 'Settings',
+  text: '系统设置',
   translate: 'sidebar.nav.SETTING',
   link: '/settings',
   icon: 'settings_suggest',
