@@ -10,12 +10,12 @@ import spray.routing.{ Directives, StandardRoute }
 import java.io.{ PrintWriter, StringWriter }
 
 class BaseService() extends Directives with LazyLogging {
-  val authError                  = "Authentication failed!"
-  val blocked                    = "Temporarily blocked because of too many login failures"
-  val authSSODisabledError       = "Authentication using OpenShift's or Rancher's RBAC was disabled!"
-  val passwordExpired            = "Password expired"
-  val timeOutStatus              = "Status: 408"
-  val authenticationFailedStatus = "Status: 401"
+  val authError                  = "身份验证错误!"
+  val blocked                    = "由于多次登录失败而暂时冻结账号"
+  val authSSODisabledError       = "使用OpenShift的或Rancher的RBAC进行身份验证已被禁用！"
+  val passwordExpired            = "密码已过期"
+  val timeOutStatus              = "状态码: 408"
+  val authenticationFailedStatus = "状态码: 401"
 
   protected def onExpiredOrInternalError(e: Throwable) = {
     logger.warn(e.getMessage)
