@@ -255,7 +255,7 @@ class NotificationService()(implicit executionContext: ExecutionContext)
                         paginationCacheManager[List[org.json4s.JsonAST.JValue]]
                           .removePagedData(s"$cacheKey-audit")
                         Utils.respondWithNoCacheControl() {
-                          complete((StatusCodes.Unauthorized, "Authentication failed!"))
+                          complete((StatusCodes.Unauthorized, "身份验证错误!"))
                         }
                       } else {
                         Utils.respondWithNoCacheControl() {
