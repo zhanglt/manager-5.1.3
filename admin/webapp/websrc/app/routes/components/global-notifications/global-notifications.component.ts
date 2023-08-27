@@ -139,7 +139,7 @@ export class GlobalNotificationsComponent implements OnInit {
         accepted: false,
         unClamped: false,
       });
-    }
+    }/** 
     if (this.isVersionMismatch) {
       this.globalNotifications.push({
         name: 'isVersionMismatch',
@@ -149,7 +149,7 @@ export class GlobalNotificationsComponent implements OnInit {
         accepted: false,
         unClamped: false,
       });
-    }
+    }*/
     if (this.passwordExpiration >= 0 && this.passwordExpiration < 10) {
       this.globalNotifications.push({
         name: 'isPasswordExpiring',
