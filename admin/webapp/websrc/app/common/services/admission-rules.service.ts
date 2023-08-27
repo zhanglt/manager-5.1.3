@@ -605,7 +605,7 @@ export class AdmissionRulesService {
   };
 
   getI18NMessages = () => {
-    this.translate4Pdf.resetLang('en');
+    this.translate4Pdf.resetLang('zh_cn');
     return {
       title: this.translate4Pdf.instant(
         'admissionControl.matchingTestGrid.TITLE'
