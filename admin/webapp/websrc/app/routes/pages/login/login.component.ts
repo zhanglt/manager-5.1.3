@@ -79,6 +79,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    this.isEulaAccepted = true
     this.inProgress = false;
     this.samlEnabled = false;
     this.oidcEnabled = false;
@@ -199,6 +200,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   localLogin(value?: any) {
+    this.validEula=true
     if (this.validEula) {
       this.authMsg = '';
       this.inProgress = true;

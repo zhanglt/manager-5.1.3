@@ -194,7 +194,7 @@
                 <!--suppress JSUnresolvedVariable -->
                 <button
                   (click)="submitForm($event, loginForm.value, '')"
-                  [disabled]="!validEula || loginForm.invalid"
+                  
                   style="width: 100%"
                   type="submit"
                 >
@@ -210,9 +210,9 @@
             >
               {{ authMsg }}
             </div>
-            <div *ngIf="!isEulaAccepted">
+            <!--div *ngIf="!isEulaAccepted">
               <app-eula (eulaStatus)="getEulaStatus($event)"></app-eula>
-            </div>
+            </div-->
           </div>
         </div>
       </div>
