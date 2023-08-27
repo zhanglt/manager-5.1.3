@@ -126,9 +126,9 @@ export class RegistryDetailsDialogComponent implements OnInit {
           {
             name: vulnerability.name,
             days: 0,
-            comment: `Vulnerability was accepted on ${
+            comment: `源镜像库: ${
               this.data.image.repository
-            } at ${date.join(' ')} from Registries page`,
+            } 时间: ${date.join(' ')} 源: 镜像库`,
             images: [`${this.data.image.repository}:${this.data.image.tag}`],
             domains: [],
           },

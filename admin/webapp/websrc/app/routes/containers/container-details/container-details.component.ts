@@ -243,12 +243,12 @@ export class ContainerDetailsComponent implements OnInit, OnDestroy {
         {
           name: vulnerability.name,
           days: 0,
-          comment: `Vulnerability was accepted on ${
+          comment: `源容器： ${
             this.container.brief.display_name
-          } at ${this.datePipe.transform(
+          } 时间： ${this.datePipe.transform(
             new Date(),
             'yyyy-MM-dd HH:mm:ss'
-          )} from Containers page`,
+          )} 来源：容器`,
           images: [],
           domains: [this.container.brief.domain],
         },

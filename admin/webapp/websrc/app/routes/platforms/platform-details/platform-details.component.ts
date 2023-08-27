@@ -114,12 +114,12 @@ export class PlatformDetailsComponent implements OnInit {
         {
           name: vulnerability.name,
           days: 0,
-          comment: `Vulnerability was accepted on ${
+          comment: `平台源: ${
             this.platform.platform
-          } at ${this.datePipe.transform(
+          } 时间: ${this.datePipe.transform(
             new Date(),
             'yyyy-MM-dd HH:mm:ss'
-          )} from Hosts page`,
+          )} 源: 主机`,
           images: [],
           domains: [],
         },
