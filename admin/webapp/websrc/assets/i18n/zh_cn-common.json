@@ -214,7 +214,7 @@
     "OR": "或",
     "OKTA_LOGIN": "SAML登录",
     "OIDC_LOGIN": "OpenID登录",
-    "AUTH_ERROR": "身分验证错误!",
+    "AUTH_ERROR": "身份验证错误!",
     "SESSION_TIMEOUT": "会话超时，请重新登录",
     "CHANGE_DEFAULT_PASSWORD": "请修改缺省密码!",
     "CHANGE_DEFAULT_PASSWORD_RANCHER": "NeuVector的默认Admin的密码应该被修改!",
@@ -825,7 +825,7 @@
       "NETWORK_GRAPH": "网络视图",
       "NETWORK_ACTIVITY": "网络活动",
       "SERVICES": "服务",
-      "RESOURCE": "资产",
+      "RESOURCE": "系统资产",
       "NODES": "主机",
       "NAMESPACES": "命名空间",
       "CONTAINERS": "容器",
@@ -845,7 +845,7 @@
       "SCAN": "漏洞",
       "REG_SCAN": "镜像库",
       "RISK": "安全隐患",
-      "BENCH": "合规",
+      "BENCH": "基线",
       "NOTIFICATIONS": "通知",
       "SECURITY_EVENT": "安全事件",
       "THREAT": "威胁",
@@ -1349,7 +1349,7 @@
     }
   },
   "cis": {
-    "COUNT_POSTFIX": " 个合规项",
+    "COUNT_POSTFIX": " 个基线检查项",
     "NOT_SUPPORTED": "平台不支持.",
     "REMEDIATION": "修复",
     "DOCKER_STATUS": "Docker扫描状态",
@@ -1360,7 +1360,7 @@
     "tab": {
       "DOCKER": "Docker基准",
       "KUBERNETES": "Kubernetes基准",
-      "COMPLIANCE": "合规"
+      "COMPLIANCE": "基线"
     },
     "profile": {
       "DESCRIPTION": "配置安全合规模板适用的范围，默认情况下这些安全合规模板会用来检查所有的容器镜像，节点，运行容器和容器域。如果自定义了容器域，该域内所有的容器镜像，节点和运行容器会被检查。",
@@ -1385,9 +1385,9 @@
       "ADD_REG": "添加法规"
     },
     "report": {
-      "TITLE": "合规报告 (合规视角)",
-      "TITLE2": "合规报告 (资产视角)",
-      "PDF_LINK": "合规视角",
+      "TITLE": "基线报告 (基线视角)",
+      "TITLE2": "基线报告 (资产视角)",
+      "PDF_LINK": "基线视角",
       "PDF_LINK2": "资产视角",
       "gridHeader": {
         "CATEGORY": "分类",
@@ -1398,8 +1398,8 @@
         "SCORED": "已评分",
         "PROFILE": "资料适用性",
         "REMEDIATION": "纠正",
-        "COMPLIANCE_LIST": "合规清单",
-        "COMPLIANCE_CNT": "合规数",
+        "COMPLIANCE_LIST": "基线清单",
+        "COMPLIANCE_CNT": "基线数",
         "SUBCONTROL": "CIS分控",
         "CONTROL_ID": "NIST控制标识符",
         "NIST_TITLE": "NIST标题"
@@ -1419,10 +1419,10 @@
         "APPENDIX_DESC2": "显示全部合规",
         "TOP_IMPACTFUL_COMP": "高影响合规",
         "TOP_COMP_CONTAINER": "高影响合规的容器",
-        "TARGET_DIS": "合规影响目标分布",
-        "SEVERITY_DIS": "合规严重程度分布",
-        "CONTAINER_INS": "容器 (合规容器 (无合规违反): {{ safeRate4Containers }} ({{ containerCnt }} 个容器))",
-        "HOST_INS": "主机 (合规主机 (无合规违反): {{ safeRate4Hosts }} ({{ hostCnt }} 个主机))",
+        "TARGET_DIS": "基线结果影响目标分布",
+        "SEVERITY_DIS": "基线检车严重程度分布",
+        "CONTAINER_INS": "容器 (基线合规容器 (无合规违反): {{ safeRate4Containers }} ({{ containerCnt }} 个容器))",
+        "HOST_INS": "主机 (基线合规主机 (无合规违反): {{ safeRate4Hosts }} ({{ hostCnt }} 个主机))",
         "PLATFORM_INS": "平台",
         "IMAGE_INS": "镜像 (合规镜像 (无合规违反): {{ safeRate4Images }} ({{ imageCnt }} 个镜像))"
       }
@@ -1620,7 +1620,7 @@
     "COUNT_POSTFIX": "条审计日志",
     "LEVEL": "级别",
     "CATEGORY": "类别",
-    "COMPLIANCE": "合规",
+    "COMPLIANCE": "基线",
     "SCAN": "扫描",
     "ADMISSION": "准入"
   },
@@ -1896,7 +1896,7 @@
       "AUTHENTICATION": "认证",
       "AUTHORIZATION": "授权",
       "CI_SCAN": "CI扫描",
-      "COMPLIANCE": "合规",
+      "COMPLIANCE": "基线",
       "CONFIG": "系统配置",
       "VULNERABILITY": "漏洞",
       "description": {
@@ -1910,7 +1910,7 @@
         "AUTHENTICATION": "管理认证服务器配置和角色对照表.",
         "AUTHORIZATION": "管理用户和自定义角色.",
         "CI_SCAN": "触发构筑阶段漏洞扫描.",
-        "COMPLIANCE": "浏览合规检查结果, 管理合规资料和配置自定义合规脚本.",
+        "COMPLIANCE": "浏览基线检查结果, 管理合规资料和配置自定义合规脚本.",
         "CONFIG": "管理系统配置",
         "VULNERABILITY": "浏览和配置漏洞管理资料"
       }
@@ -2496,8 +2496,8 @@
       "SECURITY-EVENT": "安全事件",
       "EVENT": "事件",
       "CVE-REPORT": "CVE报告",
-      "COMPLIANCE": "合规",
-      "BENCHMARK": "合规",
+      "COMPLIANCE": "基线",
+      "BENCHMARK": "基线",
       "ADMISSION-CONTROL": "准入控制"
     },
     "message": {
@@ -2910,6 +2910,7 @@
     }
   },
   "setting": {
+    "WEBHOOKS": "WEBHOOK",
     "TITLE": "系统设置",
     "DESC": "定制系统设置",
     "SYSLOG": "系统日志",
