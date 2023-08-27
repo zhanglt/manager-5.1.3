@@ -280,7 +280,7 @@ class PolicyService()(implicit executionContext: ExecutionContext)
                         if (e.getMessage.contains("Status: 401") || e.getMessage.contains(
                               "Status: 403"
                             )) {
-                          (StatusCodes.Unauthorized, "Authentication failed!")
+                          (StatusCodes.Unauthorized, "身份验证错误!")
                         } else {
                           (StatusCodes.InternalServerError, "Controller unavailable!")
                         }
