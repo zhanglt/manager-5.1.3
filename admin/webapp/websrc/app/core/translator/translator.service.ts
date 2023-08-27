@@ -6,7 +6,7 @@ export class TranslatorService {
   private defaultLanguage: string = 'zh_cn';
 
   private availablelangs = [
-    { code: 'en', text: 'English' },
+    //{ code: 'en', text: 'English' },
     { code: 'zh_cn', text: '中文' },
   ];
 
@@ -19,7 +19,7 @@ export class TranslatorService {
     this.translate.setDefaultLang(this.defaultLanguage);
   }
 
-  useLanguage(lang: string = '') {
+  useLanguage(lang: string = 'zh_cn') {
     this.translate.use(lang || this.translate.getDefaultLang());
   }
 
