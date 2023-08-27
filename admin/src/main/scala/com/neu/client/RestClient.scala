@@ -331,7 +331,7 @@ class RestClient extends DefaultJsonFormats with ClientSslConfig {
     if (e.getMessage.contains(timeOutStatus)) {
       (StatusCodes.RequestTimeout, "Session expired!")
     } else if (e.getMessage.contains(authenticationFailedStatus)) {
-      (StatusCodes.Unauthorized, "Authentication failed!")
+      (StatusCodes.Unauthorized, "身份验证错误")
     } else if (e.getMessage.contains(serverErrorStatus)) {
       (StatusCodes.ServiceUnavailable, "Server is not available!")
     } else if (e.getMessage.contains(PERMISSION_DENIED)) {
