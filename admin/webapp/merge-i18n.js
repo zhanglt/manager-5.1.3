@@ -2,7 +2,8 @@ const fs = require('fs');
 
 //const enCommonData = JSON.parse(fs.readFileSync('websrc/assets/i18n/en-common.json'));
 //const enPartnerData = JSON.parse(fs.readFileSync('websrc/assets/i18n/en-partner.json'));
-const zhcnCommonData = JSON.parse(fs.readFileSync('websrc/assets/i18n/zh_cn-common.json'));
+//const zhcnCommonData = JSON.parse(fs.readFileSync('websrc/assets/i18n/zh_cn-common.json'));
+const zhcnCommonData = JSON.parse(fs.readFileSync('websrc/assets/i18n/zh_cn.json'));
 const zhcnPartnerData = JSON.parse(fs.readFileSync('websrc/assets/i18n/zh_cn-partner.json'));
 
 const mergedEnData = { ...enCommonData, ...enPartnerData };

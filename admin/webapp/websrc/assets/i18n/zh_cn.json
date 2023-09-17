@@ -214,7 +214,7 @@
     "OR": "或",
     "OKTA_LOGIN": "SAML登录",
     "OIDC_LOGIN": "OpenID登录",
-    "AUTH_ERROR": "身份验证错误!",
+    "AUTH_ERROR": "身分验证错误!",
     "SESSION_TIMEOUT": "会话超时，请重新登录",
     "CHANGE_DEFAULT_PASSWORD": "请修改缺省密码!",
     "CHANGE_DEFAULT_PASSWORD_RANCHER": "NeuVector的默认Admin的密码应该被修改!",
@@ -833,8 +833,8 @@
       "ENFORCERS": "代理端",
       "SCANNERS": "扫描器",
       "SYSTEM_COMPONENTS": "系统组件",
-      "SECURITY": "策略",
-      "GROUP": "组",
+      "SECURITY": "系统策略",
+      "GROUP": "安全组",
       "POLICY": "网络规则",
       "SIGSTORE_VERIFIERS": "Sigstore校验器",
       "RESPONSE_POLICY": "应对规则",
@@ -842,16 +842,16 @@
       "WAF_SENSORS": "WAF 检测器",
       "ADMISSION_CONTROL": "准入控制",
       "POLICY_GRAPH": "图视",
-      "SCAN": "漏洞",
+      "SCAN": "漏洞信息",
       "REG_SCAN": "镜像库",
-      "RISK": "安全隐患",
-      "BENCH": "基线",
-      "NOTIFICATIONS": "通知",
+      "RISK": "风险信息",
+      "BENCH": "基线检查",
+      "NOTIFICATIONS": "事件通知",
       "SECURITY_EVENT": "安全事件",
       "THREAT": "威胁",
-      "EVENT": "事件",
+      "EVENT": "系统事件",
       "INCIDENT": "事故",
-      "AUDIT": "风险报告",
+      "AUDIT": "风险事件",
       "VIOLATION": "违规",
       "NETWORK_TRAFFIC": "网络流量",
       "SETTING": "设置",
@@ -1055,7 +1055,7 @@
     }
   },
   "cveProfile": {
-    "TITLE": "漏洞配置资料",
+    "TITLE": "漏洞过滤",
     "RESET": "重置",
     "ADD": "添加",
     "EDIT": "编辑",
@@ -1244,7 +1244,7 @@
     "GITLAB_PRIVATE_TOKEN": "私有令牌",
     "CVE_REPORT": "扫描报告",
     "CVE_REPORT_BY_LAYER": "分层扫描报告",
-    "COMPLIANCE_REPORT": "合规报告",
+    "COMPLIANCE_REPORT": "基线检查报告",
     "CVE_DB_DATE": "DB创建时间",
     "SINGLE_FILTER_HINT": "在这里编辑过滤器",
     "SIG_VERIFIERS": "签名信任根检测器",
@@ -1356,7 +1356,7 @@
     "KUBERNETES_STATUS": "Kubernetes扫描状态",
     "LEVEL1": "Level 1:切实可行的安全措施,\nLevel 2:纵深防御安全",
     "SCORED": "用于计算最终基准分数",
-    "COMPLIANCE_PROFILE": "合规资料",
+    "COMPLIANCE_PROFILE": "基线资料",
     "tab": {
       "DOCKER": "Docker基准",
       "KUBERNETES": "Kubernetes基准",
@@ -1385,8 +1385,8 @@
       "ADD_REG": "添加法规"
     },
     "report": {
-      "TITLE": "基线报告 (基线视角)",
-      "TITLE2": "基线报告 (资产视角)",
+      "TITLE": "基线检查报告 (基线视角)",
+      "TITLE2": "基线检查报告 (资产视角)",
       "PDF_LINK": "基线视角",
       "PDF_LINK2": "资产视角",
       "gridHeader": {
@@ -1412,19 +1412,19 @@
       },
       "others": {
         "DETAILS": "详细",
-        "DETAIL_SUB": "请参考附件的合规详细内容",
+        "DETAIL_SUB": "请参考附件的基线详细内容",
         "APPENDIX": "附录(全部影响清单)",
         "APPENDIX_DESC": "显示全部镜像，容器，主机和平台",
-        "APPENDIX2": "附录(全部合规清单)",
-        "APPENDIX_DESC2": "显示全部合规",
-        "TOP_IMPACTFUL_COMP": "高影响合规",
-        "TOP_COMP_CONTAINER": "高影响合规的容器",
-        "TARGET_DIS": "基线结果影响目标分布",
-        "SEVERITY_DIS": "基线检车严重程度分布",
-        "CONTAINER_INS": "容器 (基线合规容器 (无合规违反): {{ safeRate4Containers }} ({{ containerCnt }} 个容器))",
-        "HOST_INS": "主机 (基线合规主机 (无合规违反): {{ safeRate4Hosts }} ({{ hostCnt }} 个主机))",
+        "APPENDIX2": "附录(全部基线清单)",
+        "APPENDIX_DESC2": "显示全部基线",
+        "TOP_IMPACTFUL_COMP": "高影响基线",
+        "TOP_COMP_CONTAINER": "高影响基线的容器",
+        "TARGET_DIS": "基线影响目标分布",
+        "SEVERITY_DIS": "基线严重程度分布",
+        "CONTAINER_INS": "容器 (基线容器 (无基线违反): {{ safeRate4Containers }} ({{ containerCnt }} 个容器))",
+        "HOST_INS": "主机 (基线主机 (无基线违反): {{ safeRate4Hosts }} ({{ hostCnt }} 个主机))",
         "PLATFORM_INS": "平台",
-        "IMAGE_INS": "镜像 (合规镜像 (无合规违反): {{ safeRate4Images }} ({{ imageCnt }} 个镜像))"
+        "IMAGE_INS": "镜像 (基线镜像 (无基线违反): {{ safeRate4Images }} ({{ imageCnt }} 个镜像))"
       }
     },
     "tooltips": {
@@ -1900,7 +1900,7 @@
       "CONFIG": "系统配置",
       "VULNERABILITY": "漏洞",
       "description": {
-        "AUDIT_EVENTS": "访问风险和合规事件日志.",
+        "AUDIT_EVENTS": "访问风险和基线事件日志.",
         "EVENTS": "访问系统活动事件日志.",
         "REG_SCAN": "配置镜像库镜像扫描和浏览扫描结果.",
         "RT_POLICY": "管理策略菜单, 包括策略模式(学习,监视,保护), 网络规则, 进程规则, 文件访问规则, DLP, WAF, 截获包, 响应规则.",
@@ -1910,7 +1910,7 @@
         "AUTHENTICATION": "管理认证服务器配置和角色对照表.",
         "AUTHORIZATION": "管理用户和自定义角色.",
         "CI_SCAN": "触发构筑阶段漏洞扫描.",
-        "COMPLIANCE": "浏览基线检查结果, 管理合规资料和配置自定义合规脚本.",
+        "COMPLIANCE": "浏览基线检查结果, 管理基线资料和配置自定义基线脚本.",
         "CONFIG": "管理系统配置",
         "VULNERABILITY": "浏览和配置漏洞管理资料"
       }
@@ -2910,7 +2910,6 @@
     }
   },
   "setting": {
-    "WEBHOOKS": "WEBHOOK",
     "TITLE": "系统设置",
     "DESC": "定制系统设置",
     "SYSLOG": "系统日志",

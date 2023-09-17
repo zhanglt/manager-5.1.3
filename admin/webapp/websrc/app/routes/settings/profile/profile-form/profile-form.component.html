@@ -89,13 +89,15 @@
         </mat-icon>
         <mat-form-field class="w-100">
           <mat-label>{{ 'profile.LOCALE' | translate }}</mat-label>
-          <mat-select formControlName="locale">
+          <mat-select formControlName="locale" >
             <mat-option *ngFor="let lang of getLanguages()" [value]="lang.code">
               {{ lang.text }}
             </mat-option>
           </mat-select>
+   
         </mat-form-field>
       </div-->
+
     </div>
     <div
       *ngIf="!isLocalUser"

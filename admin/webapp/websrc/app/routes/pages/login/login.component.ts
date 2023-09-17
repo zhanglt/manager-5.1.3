@@ -216,7 +216,7 @@ export class LoginComponent implements OnInit, OnDestroy {
             GlobalVariable.user.domain_permissions =
               userInfo.token.domain_permissions;
             this.translatorService.useLanguage(
-              GlobalVariable.user.token.locale
+              'zh_cn'//GlobalVariable.user.token.locale
             );
             this.sessionStorage.set(
               GlobalConstant.SESSION_STORAGE_TOKEN,
@@ -401,7 +401,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     GlobalVariable.user = userInfo;
     GlobalVariable.user.global_permissions = userInfo.token.global_permissions;
     GlobalVariable.user.domain_permissions = userInfo.token.domain_permissions;
-    this.translatorService.useLanguage(GlobalVariable.user.token.locale);
+    this.translatorService.useLanguage('zh_cn');//GlobalVariable.user.token.locale);
     this.sessionStorage.set(GlobalConstant.SESSION_STORAGE_TOKEN, userInfo);
   }
 
