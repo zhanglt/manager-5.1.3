@@ -45,7 +45,7 @@ export class RegistryModulesComponent {
 
   exportCSV(): void {
     let module4Csv: any = cloneDeep(this.modules);
-    const title = `${this.path + this.repository} | Image Id: ${
+    const title = `ModulesReport: ${this.path + this.repository} | Image Id: ${
       this.imageId
     } | OS: ${this.baseOS}`;
     const vulMap = groupBy(this.vulnerabilities, 'name');

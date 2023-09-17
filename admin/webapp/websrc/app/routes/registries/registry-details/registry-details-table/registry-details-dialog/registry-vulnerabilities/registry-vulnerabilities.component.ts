@@ -70,7 +70,7 @@ export class RegistryVulnerabilitiesComponent {
   exportCVELayers(): void {
     const cveByLayer: any = this.prepareLayerCsvData(this.layers.slice(1));
     if (cveByLayer.length > 0) {
-      const title = `${this.path + this.repository} | Image Id: ${
+      const title = `LayersReport: ${this.path + this.repository} | Image Id: ${
         this.imageId
       } |  CVE DB Version: ${this.cveDBVersion}(${moment(this.scannerDate.replace(
         /\,/g,
@@ -86,6 +86,7 @@ export class RegistryVulnerabilitiesComponent {
         cve.published_timestamp = new Date(cve.published_timestamp * 1000);
         return cve;
       });
+
       const csv = arrayToCsv(cveByLayer4Csv, title);
       const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
       const filename = `vulnerabilities-${
@@ -100,7 +101,7 @@ export class RegistryVulnerabilitiesComponent {
       this.selectedLayer.vulnerabilities &&
       this.selectedLayer.vulnerabilities.length > 0
     ) {
-      const title = `${this.path + this.repository} | Image ID: ${
+      const title = `ScanReport: ${this.path + this.repository} | Image ID: ${
         this.imageId
       } |  CVE DB Version: ${this.cveDBVersion}(${moment(this.scannerDate.replace(
         /\,/g,
@@ -134,6 +135,7 @@ export class RegistryVulnerabilitiesComponent {
         }
       });
       const csv = arrayToCsv(cves4Csv, title);
+      
       const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
       const filename = `vulnerabilities-${
         this.path + this.repository

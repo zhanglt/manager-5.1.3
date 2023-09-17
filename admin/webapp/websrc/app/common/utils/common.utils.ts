@@ -16,6 +16,8 @@ import {
 } from '@common/types';
 import { WorkloadBrief } from '@common/types/compliance/workloadBrief';
 import { GridApi, GridOptions } from 'ag-grid-community';
+import { FromToCellComponent } from '@components/network-rules/partial/from-to-cell/from-to-cell.component';
+import { ConfirmDialogComponent } from '@components/ui/confirm-dialog/confirm-dialog.component';
 
 let _keyStr: string =
   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
@@ -50,12 +52,15 @@ export function toBoolean(value: string) {
 }
 
 export function arrayToCsv(array: any, title: string = '') {
+  //console.log("-----------------------")
+  //console.log(title)
   let line: string = '';
   let result: string = '';
   let columns: string[] = [];
-  if (title.length > 0) {
-    result += title + '\r\n';
-  }
+ // if (title.length > 0) {
+    
+  //  result += title + '\r\n';
+ // }
   let i: number = 0;
   for (let key in array[0]) {
     let keyString = key + ',';
@@ -65,8 +70,31 @@ export function arrayToCsv(array: any, title: string = '') {
   }
 
   line = line.slice(0, -1);
+  console.log(line)
+   if (title=="network"){
+    line="序号,ID,注释,源头,目的,应用,端口,行为,类型,状态,更新时间"
+   }
+   if (title=="event_sys")
+   {
+     line="类别,集群名称,控制器ID,控制器名称,执行器ID,执行器名称,主机ID,主机名称,级别,消息,名称,报告时间,时间戳,api方法,api请求,用户,用户ip,用户角色,用户会话,负载主机,负载id,负载镜像,负载名称,负载服务,执行器限制"
+   }
+   if(title.includes("LayersReport")){
+    
+     result += title + '\r\n';
+     line="摘要,cves,概要,feed_rating,文件名称,修正版本,修改时间戳,链接,名称,包名,包版本,发布时间戳,评分,评分_v3,严重成都,向量,向量_v3,标记"
+   }
+  if(title.includes("ScanReport")){
+    
+     result += title + '\r\n';
+    line="名称,概要,链接,score,score_v3,严重成都,vectors,vectors_v3,feed_rating,包名称,包版本,修复版本,标记,发布时间,修改时间"
+   }
+   if(title.includes("ModulesReport")){
+    
+     result += title + '\r\n';
+    line="名称,源头,版本,统计,漏洞"
+   }
+   
   result += line + '\r\n';
-
   for (let i = 0; i < array.length; i++) {
     let line = '';
 
@@ -77,11 +105,14 @@ export function arrayToCsv(array: any, title: string = '') {
     }
 
     line = line.slice(0, -1);
+   
     result += line + '\r\n';
   }
   return result;
 }
 
+
+  
 export function _groupBy(array, key) {
   return array.reduce(function (res, elem) {
     (res[elem[key]] = res[elem[key]] || []).push(elem);

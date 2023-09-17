@@ -274,7 +274,7 @@ export class UsersGridComponent implements OnInit {
         password: userForm.passwordForm.newPassword,
         email: userForm.email,
         role: userForm.role,
-        locale: userForm.locale,
+        locale: 'zh_cn',//userForm.locale,
         default_password: false,
         modify_password: false,
         role_domains: userForm.role_domains,

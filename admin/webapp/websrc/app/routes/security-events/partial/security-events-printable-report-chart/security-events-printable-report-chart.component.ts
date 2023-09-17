@@ -19,10 +19,10 @@ export class SecurityEventsPrintableReportChartComponent implements OnInit {
   ngOnInit(): void {
     const TYPE_BAR_COLORS = ["#E91E63", "#EF5350", "#FF9800", "#29B6F6"];
     const TYPE_BAR_LABELS = [
-      'Error',
-      'Critical',
-      'Warning',
-      'Info'
+      '错误',
+      '严重',
+      '告警',
+      '信息'
     ];
     let dataMap = {
       'Error': this.statisticData.get('Error'),
@@ -36,7 +36,7 @@ export class SecurityEventsPrintableReportChartComponent implements OnInit {
         labels: TYPE_BAR_LABELS,
         datasets: [{
           axis: 'y',
-          label: 'Security Events by Type',
+          label: '安全事件(按类型)',
           data: Array.from(Object.values(dataMap)),
           fill: false,
           backgroundColor: TYPE_BAR_COLORS,

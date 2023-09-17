@@ -460,7 +460,7 @@ export class NetworkRulesComponent implements OnInit, OnChanges, OnDestroy {
       }
     });
 
-    let csv = arrayToCsv(reportData);
+    let csv = arrayToCsv(reportData,"network");
     let blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
     saveAs(
       blob,

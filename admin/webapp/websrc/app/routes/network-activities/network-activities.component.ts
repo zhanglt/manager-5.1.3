@@ -1278,7 +1278,7 @@ export class NetworkActivitiesComponent
       let shape = evt.target;
       if (shape.get('name') === 'tag-circle') {
         showCve(
-          'High: ' + nodeMode.cve.high + ' Medium: ' + nodeMode.cve.medium,
+          '高危: ' + nodeMode.cve.high + ' 中危: ' + nodeMode.cve.medium,
           {
             x: evt.canvasX,
             y: evt.canvasY,

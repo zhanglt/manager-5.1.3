@@ -9,6 +9,7 @@ import {
 import { TranslateService } from '@ngx-translate/core';
 import { saveAs } from 'file-saver';
 import { MIN_UNIT64 } from '../events-grid.component';
+import { FromToCellComponent } from '@components/network-rules/partial/from-to-cell/from-to-cell.component';
 
 @Injectable()
 export class EventsGridCsvService {
@@ -20,6 +21,7 @@ export class EventsGridCsvService {
 
   exportCSV(events4Csv): void {
     events4Csv = JSON.parse(JSON.stringify(events4Csv));
+    
     events4Csv = events4Csv.map(event => {
       this.eventRow2Item(event);
       if (!event.enforcer_limit) event.enforcer_limit = 0;
@@ -47,9 +49,11 @@ export class EventsGridCsvService {
       }
       return event;
     });
-    const eventCsv = arrayToCsv(events4Csv);
+    //console.log(events4Csv)
+    const eventCsv = arrayToCsv(events4Csv,"event_sys");
+    //console.log(eventCsv)
     const blob = new Blob([eventCsv], { type: 'text/csv;charset=utf-8' });
-    saveAs(blob, `Events_${this.utils.parseDatetimeStr(new Date())}.csv`);
+    saveAs(blob, `事件通知表_${this.utils.parseDatetimeStr(new Date())}.csv`);
   }
 
   private eventRow2Item(event) {

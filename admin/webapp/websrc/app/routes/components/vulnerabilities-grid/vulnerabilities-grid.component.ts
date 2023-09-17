@@ -64,6 +64,7 @@ export class VulnerabilitiesGridComponent implements OnInit, OnChanges {
       headerValueGetter: () => this.translate.instant('scan.gridHeader.SCORE'),
       width: 160,
     },
+    /** 
     {
       field: 'feed_rating',
       cellRenderer: 'feedRatingCellRenderer',
@@ -72,7 +73,7 @@ export class VulnerabilitiesGridComponent implements OnInit, OnChanges {
         this.translate.instant('scan.gridHeader.FEED_RATING'),
       width: 150,
     },
-    /** 
+    
     {
       field: 'file_name',
       headerValueGetter: () =>
