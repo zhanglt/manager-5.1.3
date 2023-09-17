@@ -645,7 +645,7 @@ class AuthenticationService()(implicit executionContext: ExecutionContext)
                         user.email,
                         user.role,
                         user.locale,
-                        if (isOnNV.getOrElse("") == "true") user.timeout else Some(300),
+                        if (isOnNV.getOrElse("") == "true") user.timeout else Some(350),
                         user.default_password,
                         user.modify_password,
                         user.role_domains,
