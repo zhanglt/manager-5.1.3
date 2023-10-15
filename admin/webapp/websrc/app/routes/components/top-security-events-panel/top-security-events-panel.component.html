@@ -1,4 +1,6 @@
+<!--安全事件评估-->
 <mat-card class="margin-bottom-m dashboard-card">
+
   <mat-card-title class="d-flex align-items-center justify-content-between">
     <div class="d-flex align-items-center justify-content-start">
       {{ 'dashboard.body.panel_title.TOP_SEC_EVENTS' | translate }} - {{ 'threat.gridHeader.' + direction.toUpperCase() | translate }}
@@ -19,11 +21,18 @@
         [topSecurityEvents]="dashboardSecurityEventsService.topSecurityEvents"
         [direction]="direction"
       ></app-top-security-events-chart>
+
+  
+
       <!-- <app-top-security-events-grid
         class="col-sm-6"
         [topSecurityEvents]="dashboardSecurityEventsService.topSecurityEvents"
         [direction]="direction"
       ></app-top-security-events-grid> -->
+
+
+
     </div>
   </mat-card-content>
+
 </mat-card>
