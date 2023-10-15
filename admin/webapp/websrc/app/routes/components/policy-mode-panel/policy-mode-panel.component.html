@@ -1,4 +1,6 @@
+<!--服务的策略模式-->
 <mat-card class="margin-bottom-m dashboard-card">
+  
   <mat-card-title class="d-flex align-items-center justify-content-between">
     <div class="d-flex align-items-center justify-content-start">
       {{ 'dashboard.body.panel_title.' + assetType.substring(0, assetType.length - 1).toUpperCase() + '_MODE' | translate }}
@@ -28,4 +30,5 @@
       </app-policy-mode-caution>
     </div>
   </mat-card-content>
+
 </mat-card>
