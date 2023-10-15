@@ -132,7 +132,8 @@ export class ComplianceGridComponent implements OnInit {
       field: 'profile',
       width: 5,
       headerValueGetter: () =>
-        this.translate.instant('profile.TITLE') + '\u00A0\u24D8',
+        //this.translate.instant('profile.TITLE') + '\u00A0\u24D8',
+        this.translate.instant('安全类别') + '\u00A0\u24D8',
       headerTooltip: this.translate.instant('cis.LEVEL1'),
     },
     {
@@ -355,7 +356,7 @@ export class ComplianceGridComponent implements OnInit {
     compliance4Csv = this.formatCompliance(compliance4Csv);
     const complianceCSV = arrayToCsv(compliance4Csv, title);
     const blob = new Blob([complianceCSV], { type: 'text/csv;charset=utf-8' });
-    const filename = `compliance-${
+    const filename = `基线扫描-${
       this.path + this.repository
     }_${this.utils.parseDatetimeStr(new Date())}.csv`;
     saveAs(blob, filename);
