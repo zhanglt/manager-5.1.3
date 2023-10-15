@@ -366,7 +366,7 @@ export class SecurityEventsComponent implements OnInit {
     let csvData = this.getCsvData(
       this.securityEventsService.displayedSecurityEvents
     );
-    let csv = arrayToCsv(JSON.parse(JSON.stringify(csvData)));
+    let csv = arrayToCsv(JSON.parse(JSON.stringify(csvData)),"security_event");
     let blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
     saveAs(blob, 'Security_events.csv');
   };
