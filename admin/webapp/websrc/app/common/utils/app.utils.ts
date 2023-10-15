@@ -435,7 +435,7 @@ export class UtilsService {
     });
     const csv = arrayToCsv(vuls);
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
-    const filename = `vulnerabilities-${name}_${this.parseDatetimeStr(
+    const filename = `漏洞信息-${name}_${this.parseDatetimeStr(
       new Date()
     )}.csv`;
     saveAs(blob, filename);
