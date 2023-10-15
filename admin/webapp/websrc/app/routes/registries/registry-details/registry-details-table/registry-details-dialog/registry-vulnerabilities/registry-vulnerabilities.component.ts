@@ -137,7 +137,7 @@ export class RegistryVulnerabilitiesComponent {
       const csv = arrayToCsv(cves4Csv, title);
       
       const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
-      const filename = `vulnerabilities-${
+      const filename = `漏洞信息_-${
         this.path + this.repository
       }_${this.utilsService.parseDatetimeStr(new Date())}.csv`;
       saveAs(blob, filename);
