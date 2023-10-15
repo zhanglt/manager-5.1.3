@@ -212,14 +212,14 @@ export class ComplianceCsvService {
           );
         });
       }
-      let csv = arrayToCsv(compliance4Csv);
+      let csv = arrayToCsv(compliance4Csv,"complianReport");
       let blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
       let filename =
         compEntry && compEntry.name
           ? `${compEntry.name}_${this.utilsService.parseDatetimeStr(
               new Date()
             )}.csv`
-          : `compliance_${this.utilsService.parseDatetimeStr(new Date())}.csv`;
+          : `基线扫描_${this.utilsService.parseDatetimeStr(new Date())}.csv`;
       saveAs(blob, filename);
     }
   }
