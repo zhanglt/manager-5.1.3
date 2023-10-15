@@ -41,12 +41,19 @@ export class TopSecurityEventsChartComponent implements OnInit {
       topSecurityEventsData[index] = workloadEvents.length;
     });
     this.noChartData = topSecurityEventsData.reduce((prev, curr) => prev + curr) === 0
+    let str=this.capitalizePipe.transform(direction);
+    if(str=="Source"){
+      str="源";
+    }else{
+      str="目标";
+    }
     this.topSecurityEventsHorizontalBarChartConfig = {
       type: 'bar',
       data: {
         labels: topSecurityEventsLabels,
         datasets: [{
-          label: `${this.translate.instant('dashboard.body.panel_title.TOP_SEC_EVENTS')} - ${this.capitalizePipe.transform(direction)}`,
+          //label: `${this.translate.instant('dashboard.body.panel_title.TOP_SEC_EVENTS')} - ${this.capitalizePipe.transform(direction)}`,
+          label: `${this.translate.instant('dashboard.body.panel_title.TOP_SEC_EVENTS')} - ${str}`,
           data: topSecurityEventsData,
           backgroundColor: barChartColors,
           borderColor: barChartBorderColors,
