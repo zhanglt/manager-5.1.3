@@ -1,4 +1,6 @@
+<!--//严重运行时安全事件-->
 <mat-card class="margin-bottom-m dashboard-card">
+  
   <mat-card-title class="d-flex align-items-center justify-content-between">
     <div class="d-flex align-items-center justify-content-start">
       {{ 'dashboard.body.panel_title.CRITICAL_SECURITY_EVENT' | translate }}
@@ -14,4 +16,6 @@
     [securityEventSummary]="dashboardSecurityEventsService.securityEventSummary"
   >
   </app-security-events-chart>
+
+  
 </mat-card>
