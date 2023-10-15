@@ -70,8 +70,23 @@ export function arrayToCsv(array: any, title: string = '') {
   }
 
   line = line.slice(0, -1);
-  console.log(line)
-   if (title=="network"){
+  console.log("titel:",title)
+  console.log("line:",line)
+   
+  if (title=="security_event"){ 		  
+    line="ID,标题,级别,定位,详细信息,操作,时间"
+  } 
+  if (title=="risk_event"){ 		  
+      //line="操作系统,集群名称,数据库版本,执行器ID,执行器名称,高危统计,主机ID,主机名称,镜像,镜像ID,级别,中危统计,信息,名称,报表时间,报表时间戳,负载主机,负载ID,负载名称,负载服务,条目,基线"
+        line="操作系统,集群名称,执行器ID,执行器名称,高危统计,主机ID,主机名称,镜像ID,条目,级别,中危统计,信息,名称,镜像库,镜像库名称,报表时间,时间戳,镜像库,标签"
+    } 
+  if (title=="complianReport"){
+      line="名称,说明,分类,级别,信息,简介,修复,版本,ID,标题,scored,标签,类型,平台,节点,主机,服务,负载,镜像"
+      }
+  if (title=="vuleReport"){
+    line="名称,链接,级别,score,score_v3,ectors,vectors_v3,简介,应用,节点,主机,服务,负载,镜像,版本-修补版本,修改时间,发布时间"
+    }  
+  if (title=="network"){
     line="序号,ID,注释,源头,目的,应用,端口,行为,类型,状态,更新时间"
    }
    if (title=="event_sys")
