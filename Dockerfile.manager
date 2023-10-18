@@ -6,13 +6,13 @@ COPY stage /
 
 ARG NV_TAG
 LABEL name="manager" \
-      vendor="NeuVector Inc." \
+      vendor="chinaunicom" \
       version=${NV_TAG} \
       release=${NV_TAG} \
-      neuvector.image="neuvector/manager" \
-      neuvector.role="manager" \
-      neuvector.rev="git.xxxx"
-
+      unicsp.image="unicsp/manager" \
+      unicsp.role="manager" \
+      unicsp.rev="git.xxxx"
+MAINTAINER kitsdk@163.com
 RUN adduser -S manager
 USER manager
 
