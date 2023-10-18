@@ -81,7 +81,8 @@ export class ExposureChartComponent implements OnInit {
           },
           title: {
             display: true,
-            text: this.translate.instant('dashboard.body.panel_title.EXPOSURES'),
+            //text: this.translate.instant('dashboard.body.panel_title.EXPOSURES'),
+           //text: this.translate.instant("分析"),
           },
         },
       },
