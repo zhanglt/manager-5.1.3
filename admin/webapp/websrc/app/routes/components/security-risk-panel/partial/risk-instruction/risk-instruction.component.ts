@@ -11,7 +11,7 @@ import { DashboardService } from '@common/services/dashboard.service';
 export class RiskInstructionComponent implements OnInit {
   @Input() scoreInfo!: InternalSystemInfo;
   @Input() activeIndex: number;
-  instructions: Array<RiskInstruction> = new Array(4);
+  instructions: Array<RiskInstruction> = new Array(2);
   RiskType = RiskType;
 
   constructor(
@@ -50,6 +50,7 @@ export class RiskInstructionComponent implements OnInit {
       ),
       active: false,
     };
+    
     this.instructions[2] = {
       type: RiskType.Exposure,
       title: this.translate.instant(
@@ -60,6 +61,7 @@ export class RiskInstructionComponent implements OnInit {
       ),
       active: false,
     };
+    
     this.instructions[3] = {
       type: RiskType.Vulnerability,
       title: this.translate.instant(
@@ -69,7 +71,7 @@ export class RiskInstructionComponent implements OnInit {
         'dashboard.heading.guideline.VUL_EXPLOIT'
       ),
       active: false,
-    };
+    };  
 
   };
 
