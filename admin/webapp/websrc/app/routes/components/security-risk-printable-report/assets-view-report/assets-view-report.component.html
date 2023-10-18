@@ -6,11 +6,11 @@
   </div>
 </div>
 <div class="report-summary pagebreak">
-  <div class="summary-title">
+  <!--div class="summary-title">
     {{ 'scan.report.others.DETAILS' | translate }}
     <div style="font-size: 16px;" *ngIf="dictionaryData.length > SEC_RISK_REPORT_NO_APPENDIX_MAX_ROW" class="text-warning">{{ 'scan.APPENDIX_LIMIT_HINT' | translate }}</div>
     <div style="font-size: 16px;" *ngIf="dictionaryData.length <= SEC_RISK_REPORT_NO_APPENDIX_MAX_ROW">({{ (reportPage === 'vulnerabilities' ? 'scan' : 'cis') + '.report.others.DETAIL_SUB' | translate }})</div>
-  </div>
+  </div-->
   <app-assets-view-report-assets-tables
     [masterGrids]="masterGrids"
     [reportPage]="reportPage"
