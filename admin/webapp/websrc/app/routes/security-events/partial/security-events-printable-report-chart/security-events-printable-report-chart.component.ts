@@ -15,7 +15,7 @@ export class SecurityEventsPrintableReportChartComponent implements OnInit {
   constructor(
     private translate: TranslateService
   ) { }
-
+// 事件通知-安全事件-打印报告
   ngOnInit(): void {
     const TYPE_BAR_COLORS = ["#E91E63", "#EF5350", "#FF9800", "#29B6F6"];
     const TYPE_BAR_LABELS = [
