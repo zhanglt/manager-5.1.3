@@ -7,6 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 export const FilterLevel = {
   error: 'Error',
   critical: 'Critical',
+  //critical: '严重',
   warning: 'Warning',
   info: 'Info',
 };
