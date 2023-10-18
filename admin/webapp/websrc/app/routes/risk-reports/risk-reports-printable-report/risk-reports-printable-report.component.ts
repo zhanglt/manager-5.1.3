@@ -43,7 +43,56 @@ export class RiskReportsPrintableReportComponent implements OnInit {
   }
 
   mapEntries(map: Map<string, number>) {
-    return Array.from(map.entries());
+    /*
+    console.log("----------------------------------")
+    map.forEach((value, key) => {
+      console.log(key, value)
+    })
+    console.log("----------------------------------")
+    */
+  const severityDistribution = new Map([
+      ['Info', 0],
+      ['Warning', 0],
+      ['Error', 0],
+      ['Critical', 0],
+    ]);
+
+ 
+ 
+
+  let larr = new Map()
+    map.forEach((value, key) => {
+      if (key=="Info"){
+       larr.set("信息(Info)",value);
+      }else if (key=="Warning"){
+       larr.set("告警(Warning)",value);
+      }else if (key=="Error"){
+       larr.set("错误(Error)",value);
+      }else if (key=="Critical"){
+       larr.set("严重(Critical)",value);
+      }else if (key=="Container.Scan.Report"){
+       larr.set("容器扫描",value);
+      }else if (key=="Host.Scan.Report"){
+       larr.set("主机扫描",value);
+      }else if (key=="Registry.Scan.Report"){
+       larr.set("镜像扫描",value);
+      }else if (key=="Platform.Scan.Report"){
+       larr.set("平台扫描",value);
+      }else if (key=="Compliance.Image.Violation"){
+       larr.set("镜像基线违反",value);
+      }else if (key=="Compliance.Container.Violation"){
+       larr.set("容器基线违反",value);
+      }else if (key=="Compliance.ContainerFile.Violation"){
+       larr.set("容器文件基线违反",value);
+      }else if (key=="Compliance.Host.Violation"){
+       larr.set("主机基线违反",value);
+      }else{
+        larr.set(key,value);
+      }
+    
+    })
+  
+    return Array.from(larr.entries());
   }
 
   getSummaryRange(count: number, filteredCount: number) {
@@ -56,7 +105,7 @@ export class RiskReportsPrintableReportComponent implements OnInit {
       filteredCount: filteredCount,
     });
   }
-
+// 对应/v1/log/audit ，需要在服务端进行直接更改返回值列表
   genDistribution() {
     const severityDistribution = new Map([
       ['Info', 0],
