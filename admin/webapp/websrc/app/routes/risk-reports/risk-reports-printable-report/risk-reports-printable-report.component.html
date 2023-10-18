@@ -29,12 +29,12 @@
           </div>
         </div>
       </div>
-      <div class="pull-right margin-right-xl margin-top-l">
+      <!--div class="pull-right margin-right-xl margin-top-l">
         <app-risk-reports-printable-report-pie-chart
           [statisticData]="
             severityDistribution
           "></app-risk-reports-printable-report-pie-chart>
-      </div>
+      </div-->
     </div>
     <div class="h-50 clearfix margin-top-xxxl">
       <div class="pull-left margin-left-l" style="width: 50%">
@@ -52,19 +52,19 @@
           </div>
         </div>
       </div>
-      <div class="pull-right margin-right-xl margin-top-l">
+      <!--div class="pull-right margin-right-xl margin-top-l">
         <app-risk-reports-printable-report-bar-chart
           [statisticData]="
             scanDistribution
           "></app-risk-reports-printable-report-bar-chart>
-      </div>
+      </div-->
     </div>
   </div>
   <div class="clearfix">
     <span class="mat-headline text-info">{{
       'audit.report.details' | translate
     }}</span>
-    <table class="print-table">
+    <table class="print-table" style="width: 1400px">
       <thead>
         <tr class="print-header">
           <th class="print-cell" style="width: 5%">
