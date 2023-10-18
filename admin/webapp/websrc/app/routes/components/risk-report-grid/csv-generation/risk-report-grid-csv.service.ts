@@ -37,7 +37,7 @@ export class RiskReportGridCsvService {
       delete audit.medium_vuls;
       return audit;
     });
-    let csv = arrayToCsv(reports4Csv);
+    let csv = arrayToCsv(reports4Csv,"risk_event");
     let blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
     saveAs(blob, `Risk Reports_${this.utils.parseDatetimeStr(new Date())}.csv`);
   }
