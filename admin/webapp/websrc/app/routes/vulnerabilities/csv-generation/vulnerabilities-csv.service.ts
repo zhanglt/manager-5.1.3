@@ -279,14 +279,14 @@ export class VulnerabilitiesCsvService {
         });
       }
 
-      let csv = arrayToCsv(vulnerabilities4Csv);
+      let csv = arrayToCsv(vulnerabilities4Csv,"vuleReport");
       let blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
       let filename =
         cveEntry && cveEntry.name
           ? `${cveEntry.name}_${this.utilsService.parseDatetimeStr(
               new Date()
             )}.csv`
-          : `vulnerabilities_${this.utilsService.parseDatetimeStr(
+          : `漏洞信息_${this.utilsService.parseDatetimeStr(
               new Date()
             )}.csv`;
       saveAs(blob, filename);
