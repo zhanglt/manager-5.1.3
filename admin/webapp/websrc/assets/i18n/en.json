@@ -88,7 +88,7 @@
     "QUARANTINED": "Quarantined",
     "CONNECTED": "Connected",
     "STOPPED": "Stopped",
-    "CRITICAL": "Critical",
+    "CRITICAL": "严重",
     "IDLE": "Idle",
     "ERR": "Error",
     "LOW": "Low",

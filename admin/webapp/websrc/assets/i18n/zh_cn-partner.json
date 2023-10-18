@@ -28,8 +28,8 @@
     },
 		"admissionControl": {
 			"msg": {
-        "CLUSTER_ROLE_NOT_CONFIG": "没有正确配置Neuvector准入控制需要的neuvector-binding-admission的 \"cluster role\" 和 \"cluster role binding\".",
-        "WEBHOOK_NOT_CONFIG": "没有正确配置Neuvector准入控制需要的neuvector-svc-admission-webhook服务.",
+        "CLUSTER_ROLE_NOT_CONFIG": "没有正确配置准入控制需要的neuvector-binding-admission的 \"cluster role\" 和 \"cluster role binding\".",
+        "WEBHOOK_NOT_CONFIG": "没有正确配置准入控制需要的neuvector-svc-admission-webhook服务.",
         "NO_UPD_PROMISSION": "NeuVector默认服务账户没有服务资源的更新权限."
 			}
 		},
