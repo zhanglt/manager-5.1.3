@@ -72,7 +72,10 @@ export function arrayToCsv(array: any, title: string = '') {
   line = line.slice(0, -1);
   console.log("titel:",title)
   console.log("line:",line)
-   
+  
+  if (title=="RegistryReport"){ 		  
+    line="镜像仓库,镜像ID,操作系统,容量,高危,中危,状态,扫描时间"
+  } 
   if (title=="security_event"){ 		  
     line="ID,标题,级别,定位,详细信息,操作,时间"
   } 
@@ -96,12 +99,12 @@ export function arrayToCsv(array: any, title: string = '') {
    if(title.includes("LayersReport")){
     
      result += title + '\r\n';
-     line="摘要,cves,概要,feed_rating,文件名称,修正版本,修改时间戳,链接,名称,包名,包版本,发布时间戳,评分,评分_v3,严重成都,向量,向量_v3,标记"
+     line="摘要,cves,概要,feed_rating,文件名称,修正版本,修改时间戳,链接,名称,包名,包版本,发布时间戳,评分,评分_v3,级别,向量,向量_v3,标记"
    }
   if(title.includes("ScanReport")){
     
      result += title + '\r\n';
-    line="名称,概要,链接,score,score_v3,严重成都,vectors,vectors_v3,feed_rating,包名称,包版本,修复版本,标记,发布时间,修改时间"
+    line="名称,概要,链接,score,score_v3,级别,vectors,vectors_v3,feed_rating,包名称,包版本,修复版本,标记,发布时间,修改时间"
    }
    if(title.includes("ModulesReport")){
     
