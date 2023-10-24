@@ -45,11 +45,12 @@ export class RegistryDetailsComponent {
       status: image.status,
       scanned_at: image.scanned_at,
     }));
-    const imagesCSV = arrayToCsv(images4Csv);
+    // 镜像仓库扫描报表
+    const imagesCSV = arrayToCsv(images4Csv,"RegistryReport");
     const blob = new Blob([imagesCSV], { type: 'text/csv;charset=utf-8' });
     saveAs(
       blob,
-      `registry-vulnerabilities-${
+      `镜像仓库-漏洞信息-${
         registryDetails.selectedRegistry.name
       }_${this.utils.parseDatetimeStr(new Date())}.csv`
     );
