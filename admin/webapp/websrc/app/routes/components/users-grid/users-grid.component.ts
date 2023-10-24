@@ -124,7 +124,7 @@ export class UsersGridComponent implements OnInit {
             result = MapConstant.AUTH_PROVIDER.RANCHER;
           }
         } else {
-          result = this.tr.instant('partner.general.PROVIDER');
+          result = this.tr.instant('general.PROVIDER');
         }
         return result;
       },
