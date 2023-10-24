@@ -45,9 +45,9 @@ export class RegistryModulesComponent {
 
   exportCSV(): void {
     let module4Csv: any = cloneDeep(this.modules);
-    const title = `ModulesReport: ${this.path + this.repository} | Image Id: ${
+    const title = `ModulesReport: ${this.path + this.repository} | 镜像ID: ${
       this.imageId
-    } | OS: ${this.baseOS}`;
+    } | 操作系统: ${this.baseOS}`;
     const vulMap = groupBy(this.vulnerabilities, 'name');
     module4Csv = module4Csv.map(module => {
       return {
@@ -83,7 +83,7 @@ export class RegistryModulesComponent {
     });
     const modules = arrayToCsv(module4Csv, title);
     const blob = new Blob([modules], { type: 'text/csv;charset=utf-8' });
-    const filename = `modules-${
+    const filename = `系统模块-${
       this.path + this.repository
     }_${this.utilsService.parseDatetimeStr(new Date())}.csv`;
     saveAs(blob, filename);
