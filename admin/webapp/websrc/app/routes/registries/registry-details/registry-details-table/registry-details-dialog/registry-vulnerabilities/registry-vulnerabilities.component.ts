@@ -70,12 +70,12 @@ export class RegistryVulnerabilitiesComponent {
   exportCVELayers(): void {
     const cveByLayer: any = this.prepareLayerCsvData(this.layers.slice(1));
     if (cveByLayer.length > 0) {
-      const title = `LayersReport: ${this.path + this.repository} | Image Id: ${
+      const title = `LayersReport: ${this.path + this.repository} | 镜像ID: ${
         this.imageId
-      } |  CVE DB Version: ${this.cveDBVersion}(${moment(this.scannerDate.replace(
+      } |  CVE数据库版本: ${this.cveDBVersion}(${moment(this.scannerDate.replace(
         /\,/g,
         ' '
-      )).format('MM/DD/YYYY hh:mm:ss')}) | OS: ${this.baseOS}`;
+      )).format('yyyy-MM-dd hh:mm:ss')}) | OS: ${this.baseOS}`;
       let cveByLayer4Csv = cloneDeep(cveByLayer);
       cveByLayer4Csv = cveByLayer4Csv.map(cve => {
         cve.description = `${cve.description.replace(/\"/g, "'")}`;
@@ -89,7 +89,7 @@ export class RegistryVulnerabilitiesComponent {
 
       const csv = arrayToCsv(cveByLayer4Csv, title);
       const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
-      const filename = `vulnerabilities-${
+      const filename = `漏洞信息-${
         this.path + this.repository
       }_${this.utilsService.parseDatetimeStr(new Date())}.csv`;
       saveAs(blob, filename);
@@ -101,13 +101,13 @@ export class RegistryVulnerabilitiesComponent {
       this.selectedLayer.vulnerabilities &&
       this.selectedLayer.vulnerabilities.length > 0
     ) {
-      const title = `ScanReport: ${this.path + this.repository} | Image ID: ${
+      const title = `ScanReport: ${this.path + this.repository} | 镜像ID: ${
         this.imageId
-      } |  CVE DB Version: ${this.cveDBVersion}(${moment(this.scannerDate.replace(
+      } |  CVE数据库版本: ${this.cveDBVersion}(${moment(this.scannerDate.replace(
         /\,/g,
         ' '
-      )).format('MM/DD/YYYY hh:mm:ss')}) | OS: ${this.baseOS}${this.selectedLayer?.verifiers && this.selectedLayer?.verifiers.length > 0 ?
-        `\nSigstore Verifiers: ${this.selectedLayer?.verifiers.join(' | ')} (Verified at: ${this.selectedLayer?.verificationTimestamp})` : ''}`;
+      )).format('yyyy-MM-dd hh:mm:ss')}) | OS: ${this.baseOS}${this.selectedLayer?.verifiers && this.selectedLayer?.verifiers.length > 0 ?
+        `\n验证签名: ${this.selectedLayer?.verifiers.join(' | ')} (验证时间: ${this.selectedLayer?.verificationTimestamp})` : ''}`;
       let cves4Csv: any = cloneDeep(this.selectedLayer.vulnerabilities);
       cves4Csv = cves4Csv.map(cve => {
         cve.description = `${cve.description.replace(/\"/g, "'")}`;
